@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Troywell | Личный кабинет</title>
+</head>
+<body>
+
+	<svg style="display: none">
+	<!-- arrow down small -->
+    <symbol id="arrow-down-small" viewBox="0 0 12 8">
+     <path d="M1 1.5L6 6.5L11 1.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+    </symbol>
+	</svg>
+
+	
+	<main class="account account--profile">
+		<div class="account__wrapper container">
+			
+			<!-- left -->
+			<section class="account__left">
+				<h1 class="visually-hidden">Навигация по профилю</h1>
+
+				<!-- account navigation -->
+				<nav class="account__navigation">
+					<div class="account__content">
+					<button class="account__value" type="button">
+						<span>Мой профиль</span>
+						<svg width="12" height="8">
+              <use xlink:href="#arrow-down-small"></use>
+            </svg>
+					</button>
+
+					<ul class="account__navigation-list">
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Моё вознаграждение</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Вывод средств</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Доход от друзей</a></li>
+						<li class="account__navigation-item account__navigation-item--active"><a class="account__navigation-link" href="#">Профиль</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Избранные магазины</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Уведомления</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Мои приложения</a></li>
+						<li class="account__navigation-item"><a class="account__navigation-link" href="#">Выйти</a></li>
+					</ul>
+				</div>
+				</nav> <!-- end account navigationt -->
+			</section> <!-- end left -->
+
+			<section class="account__right">
+				<div class="account__area">
+					<div class="account__main-data">
+					<h2 class="account__area-title visually-hidden">Мой профиль</h2>
+
+					<!-- edit area -->
+					<div class="account__area-edit-area">
+						<picture class="account__area-picture">
+						  <img class="account__area-image" src="img/mobile/profile-photo.png 1x" srcset="img/mobile/profile-photo@2x.png 2x" width="91" height="91" alt="profile photo">
+					  </picture>
+
+					  <button class="account__area-edit" type="button" aria-label="Редактировать фото">
+					  	<img class="account__area-edit-image" src="img/icons/edit-button.svg" width="40" height="40" alt="edit image">
+					  </button>
+					</div>
+
+					<!-- controls area -->
+					<ul class="account__area-controls-list">
+						<li class="account__area-controls-item">
+							<button class="account__area-controls-button" type="button">Заменить фото</button>
+						</li>
+						<li class="account__area-controls-item">
+							<button class="account__area-controls-button account__area-controls-button--remove" type="button">Удалить</button>
+						</li>
+					</ul>
+
+					<form class="account__area-form" action="" method="">
+						<fieldset class="account__area-fields">
+						<legend class="account__area-fields-title visually-hidden">Some Title</legend>
+
+						<label class="account__area-fields-label" for="firstname-field">Имя</label>
+						<input class="account__area-fields-input" type="text" name="firstname-field" id="firstname-field" placeholder="Константин">
+
+						<label class="account__area-fields-label" for="lastname-field">Фамилия</label>
+						<input class="account__area-fields-input" type="text" name="lastname-field" id="lastname-field" placeholder="Иванов">
+
+						<label class="account__area-fields-label" for="birthday-field">Дата рождения</label>
+						<input class="account__area-fields-input" type="text" name="birthday-field" id="birthday-field" placeholder="30.04.2022">
+
+						<label class="account__area-fields-label" for="email-field">Адрес электронной почты</label>
+						<input class="account__area-fields-input" type="text" name="email-field" id="email-field" placeholder="example@gmail.com">
+
+						<label class="account__area-fields-label">Пол</label>
+						<div class="account__area-gender-container">
+							<input class="account__area-fields-input visually-hidden" type="radio" name="gender-field" id="gender-field1" checked="">
+							<label class="account__area-gender" for="gender-field1">Мужской</label>
+							
+							<input class="account__area-fields-input visually-hidden" type="radio" name="gender-field" id="gender-field2">
+							<label class="account__area-gender" for="gender-field2">Женский</label>
+						</div>
+					</fieldset>
+
+					<ul class="account__area-buttons">
+						<li class="account__area-item"><button class="account__area-button" type="button">Отменить</button></li>
+						<li class="account__area-item"><button class="account__area-button account__area-button--save" type="button">Сохранить</button></li>
+					</ul>
+					</form>
+				</div>
+
+				<div class="account__secondary-data">
+					<form class="account__area-form" action="" method="">
+						<fieldset class="account__area-fields account__area-fields--password">
+						<legend class="account__area-fields-title">Пароль</legend>
+
+						<label class="account__area-fields-label" for="new-password-field">Новый пароль</label>
+						<input class="account__area-fields-input" type="password" name="new-password-field" id="new-password-field" placeholder="Введите новый пароль">
+
+						<label class="account__area-fields-label" for="repeat-password-field">Повторите новый пароль</label>
+						<input class="account__area-fields-input" type="password" name="repeat-password-field" id="repeat-password-field" placeholder="Повторите новый пароль">
+					</fieldset>
+
+					<ul class="account__area-buttons">
+						<li class="account__area-item"><button class="account__area-button" type="button">Отменить</button></li>
+						<li class="account__area-item"><button class="account__area-button account__area-button--save" type="button">Сохранить</button></li>
+					</ul>
+					</form>
+				</div>
+				</div> <!-- end account area -->
+			</section> <!-- end account right -->
+		</div>
+	</main>
+</body>
+</html>
