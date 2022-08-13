@@ -1,0 +1,36 @@
+.footer__wrapper {
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.footer__logo {
+	width: max-content;
+	margin-bottom: 16px;
+}
+
+.footer__copyright {
+	@include textExtraSmallRegular;
+	color: $grey400;
+	margin: 0;
+}
+
+@media (min-width: 1024px) {
+	.footer__wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 33px;
+		padding-bottom: 40px;
+	}
+
+	.footer__logo {
+		margin-bottom: 0;
+	}
+
+	.footer__copyright {
+		@include textMediumMedium;
+	}
+}

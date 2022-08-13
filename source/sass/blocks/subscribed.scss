@@ -1,0 +1,132 @@
+.subscribed__title {
+	display: none;
+}
+
+.subscribed__alert {
+	margin: 0;
+	margin-bottom: 24px;
+	border: 1px solid $grey300;
+	border-radius: 16px;
+}
+
+.subscribed__list {
+	@include reset-list;
+	margin-bottom: 40px;
+}
+
+.subscribed__item {
+	padding: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+	border-radius: 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.subscribed__item-picture {
+	width: auto;
+	margin-right: 12px;
+}
+
+.subscribed__item-value {
+	margin-right: auto;
+}
+
+.subscribed__item-title {
+	@include textSmallMedium;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.subscribed__item-coupons {
+	@include textExtraSmallRegular;
+	display: flex;
+	align-items: center;
+	color: $grey400;
+
+	svg {
+		fill: $grey700;
+		margin-right: 4px;
+	}
+}
+
+.subscribed__button {
+	@include textSmallMedium;
+	font-family: inherit;
+	color: #ffffff;
+	background-color: $primary500;
+	padding: 5px 11px;
+	border: 1px solid $primary500;
+	border-radius: 100px;
+
+	&--signed {
+		border: 1px solid $primary500;
+		color: $primary500;
+		background-color: transparent;
+	}
+}
+
+@media (min-width: 1024px) {
+	.subscribed__title {
+		color: $grey700;
+		font-size: 30px;
+		line-height: 38px;
+		font-weight: 400;
+		display: block;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.subscribed__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 32px;
+	}
+
+	.subscribed__item {
+		padding: 24px 8px 24px 16px;
+		margin-bottom: 24px;
+		margin-right: 24px;
+		width: calc(100% / 2 - 12px);
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 24px;
+		}
+	}
+
+	.subscribed__item-picture {
+		margin-right: auto;
+	}
+
+	.subscribed__button {
+		font-weight: 700;
+	}
+}
+
+@media (min-width: 1440px) {
+	.subscribed__title {
+		color: $grey800;
+		font-weight: 600;
+	}
+
+	.subscribed__item {
+		padding: 24px;
+	}
+
+	.subscribed__item-picture {
+		margin-right: 12px;
+	}
+
+	.subscribed__button {
+		font-weight: 500;
+	}
+}

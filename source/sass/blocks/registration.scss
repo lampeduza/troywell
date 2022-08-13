@@ -1,0 +1,97 @@
+.registration__wrapper {
+	padding: 24px 16px;
+
+	position: relative;
+}
+
+.registration__title {
+	@include textLargeMedium;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.registration__back {
+	@include smallButtonBack;
+}
+
+.registration__close {
+	@include smallButtonClose;
+	top: 30px;
+}
+
+.registration__set {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.registration__label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.registration__input {
+	@include input;
+	@include inputState;
+	margin-bottom: 24px;
+
+	&--password {
+		padding-right: 42px;
+	}
+}
+
+.registration__container {
+	position: relative;
+}
+
+.registration__protected-button {
+	@include protectedButton;
+}
+
+.registration__register {
+	@include blueButton;
+	border: none;
+}
+
+.registration__agree {
+	@include textSmallRegular;
+	margin: 0;
+	margin-top: 96px;
+	margin-bottom: 24px;
+}
+
+.registration__agree-label {
+	padding-left: 24px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		@include checkboxBlue;
+	}
+}
+
+.registration__agree-checkbox {
+	&:checked {
+		~ .registration__agree-label {
+			&::after {
+				@include tickBlue;
+			}
+		}
+	}
+}
+
+.registration__agree-policy {
+	color: #3A70F7;
+}
+
+@media (min-width: 480px) {
+	.registration__agree {
+		margin-top: 0;
+		padding-right: 90px;
+	}
+}

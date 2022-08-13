@@ -1,0 +1,79 @@
+.earn {
+	background-color: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.earn__sum {
+	@include textXlSemibold;
+	color: $grey700;
+	width: max-content;
+	margin: 0;
+	margin-bottom: 8px;
+	position: relative;
+
+	&::after {
+		@include bigMobileDiamond;
+		left: auto;
+		right: -32px;
+	}
+}
+
+.earn__cashback {
+	@include textSmallRegular;
+	color: $grey400;
+	margin: 0;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+
+	svg {
+		margin-left: 4px;
+		fill: $grey400;
+
+		&:hover {
+			fill: $grey500;
+		}
+	}
+}
+
+.earn__expect {
+	@include textExtraSmallRegular;
+	color: $grey700;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: $grey50;
+	border-radius: 12px;
+	padding: 14px 30px 14px 16px;
+}
+
+.earn__expect-text {
+	margin: 0;
+	margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+	.earn__sum {
+		margin-bottom: 40px;
+	}
+
+	.earn__expect {
+		padding: 14px 8px;
+	}
+
+	.earn__expect-text {
+		margin-right: 5px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.earn__sum {
+		margin-bottom: 8px;
+	}
+
+	.earn__expect {
+		padding: 14px;
+	}
+}

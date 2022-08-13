@@ -1,0 +1,85 @@
+.breadcrumbs {
+	display: none;
+}
+
+/* Это нужно перенести в desktop */
+.breadcrumbs__list {
+	@include reset-list;
+	display: flex;
+	align-items: center;
+}
+
+.breadcrumbs__item {
+	margin-right: 8px;
+	position: relative;
+
+	&:not(:last-child)::after {
+		@include breadcrumbsArrow;
+	}
+
+	&:last-child {
+		margin-right: 0;
+
+		.breadcrumbs__link {
+			padding: 4px 8px;
+		}
+	}
+}
+
+.breadcrumbs__link {
+	@include textSmallMedium;
+	color: $grey500;
+	padding: 4px 34px 4px 8px;
+
+	&--home {
+		padding: 2.5px 30px 2.5px 3.5px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.breadcrumbs {
+		display: flex;
+		margin-bottom: 24px;
+	}
+
+	.breadcrumbs__link {
+		&--home {
+			svg {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.breadcrumbs__list {
+		gap: 32px;
+		align-items: center;
+	}
+
+	.breadcrumbs__item {
+		margin: 0;
+
+		&:not(:last-child) {
+			&::after {
+				right: -23px;
+			}
+		}
+	}
+	.breadcrumbs__link {
+		padding: 4px 8px;
+
+		&--home {
+			padding: 0;
+
+			span {
+				display: none;
+			}
+
+			svg {
+				display: block;
+				margin-top: -2px;
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.income__title {
+	display: none;
+}
+
+.income__invited {
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.income__earn {
+	padding: 16px;
+	margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+	.income__title {
+		@include titleSmallSemibold;
+		color: $grey700;
+		display: block;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.income__invited {
+		margin-bottom: 0;
+	}
+
+	.income__earn {
+		margin-bottom: 0;
+	}
+
+	.income__index-column {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 14px;
+
+		section {
+			width: calc(100% / 2 - 12px);
+			padding: 24px 0 24px 24px;
+
+			h2 {
+				@include titleExtraSmallSemibold;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.income__title {
+		color: $grey800;
+	}
+
+	.income__index-column {
+		margin-bottom: 56px;
+
+		section {
+			padding: 24px;
+		}
+	}
+}

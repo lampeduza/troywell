@@ -1,0 +1,77 @@
+.sms-code__wrapper {
+	padding: 24px 16px;
+	position: relative;
+}
+
+.sms-code__title {
+	@include textLargeMedium;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.sms-code__back {
+	@include smallButtonBack;
+}
+
+.sms-code__close {
+	@include smallButtonClose;
+}
+
+.sms-code__text {
+	@include textSmallRegular;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.sms-code__link {
+	color: #3A70F7;
+}
+
+.sms-code__form {
+	input {
+		&:invalid {
+			+ .validity-icon::before {
+  			top: 15px;
+			}
+		}
+	}
+}
+
+.sms-code__label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.sms-code__input {
+	@include input;
+	@include inputState;
+	margin-bottom: 24px;
+
+	&--password {
+		padding-right: 42px;
+	}
+}
+
+.sms-code__forecast {
+	@include textSmallRegular;
+	color: $grey500;
+	margin: 0;
+	margin-bottom: 484px;
+	text-align: center;
+}
+
+.sms-code__confirm {
+	@include blueButton;
+	border: none;
+}
+
+@media (min-width: 480px) {
+	.sms-code__forecast {
+		margin-bottom: 24px;	
+	}
+}

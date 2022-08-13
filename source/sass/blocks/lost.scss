@@ -1,0 +1,51 @@
+.lost__wrapper {
+	padding: 24px 16px;
+	position: relative;
+}
+
+.lost__title {
+	@include textLargeMedium;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.lost__back {
+	@include smallButtonBack;
+}
+
+.lost__close {
+	@include smallButtonClose;
+}
+
+.lost__text {
+	@include textSmallRegular;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.lost__label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.lost__input {
+	@include input;
+	@include inputState;
+	margin-bottom: 550px;
+}
+
+.lost__reset {
+	@include blueButton;
+	border: none;
+}
+
+@media (min-width: 480px) {
+	.lost__input {
+		margin-bottom: 24px;
+	}
+}

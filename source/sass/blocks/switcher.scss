@@ -1,0 +1,81 @@
+.switcher__field {
+	&:checked {
+    + label {
+      &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 18px;
+        left: 37px;
+        transition: left .2s;
+      }
+
+      &:focus,
+  		&:active {
+    		&::before {
+      		box-shadow: 0px 0px 0px 2px #B8C1F7;
+    		}
+  		}
+
+      &::before {
+    		background-color: $primary500;
+    		transition: background .5s;
+  		}
+    }
+
+    + .switcher__sign--disabled {
+    	&::before {
+    		background-color: $grey100;
+    	}
+    }
+  }
+}
+
+.switcher__sign {
+	@include textSmallMedium;
+	color: $grey500;
+	display: block;
+	padding: 16px 16px 16px 80px;
+	padding-right: 5px;
+	position: relative;
+
+	@include switcherMiddle;
+}
+
+@media (min-width: 1024px) {
+	.switcher__field {
+		&:checked {
+    	+ label {
+      	&::after {
+        	top: 34px;
+        	left: 46px;
+      	}
+    	}
+  	}
+	}
+
+	.switcher__sign {
+		padding: 24px 48px 24px 88px;
+		font-weight: 700;
+	}
+}
+
+@media (min-width: 1440px) {
+	.switcher__field {
+		&:checked {
+    	+ label {
+      	&::after {
+        	top: 26px;
+        	left: 46px;
+      	}
+    	}
+  	}
+	}
+
+	.switcher__sign {
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,155 @@
+.sort {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 24px;
+}
+
+.sort__content {
+	background-color: $grey100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 13px 17px;
+	border-radius: 100px;
+	cursor: pointer;
+	z-index: -1;
+	position: relative;
+
+	span {
+		@include textMediumRegular;
+		color: $grey800;
+		
+		display: none;
+	}
+}
+
+.sort__arrow-icon {
+	display: none;
+}
+
+.sort__area {
+	background-color: $white;
+	border-radius: 16px 16px 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+
+	display: none;
+
+	.lost__back,
+	.lost__close {
+		position: static;
+	}
+
+	.lost__back {
+		order: -1;
+	}
+}
+
+.sort__header {
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sort__header-title {
+	@include textLargeSemibold;
+	color: $grey700;
+	order: 0;
+}
+
+.sort__list {
+	@include reset-list;
+	margin-top: -24px;
+	padding-top: 24px;
+}
+
+.sort__item {
+	@include textMediumMedium;
+	cursor: pointer;
+	color: $grey800;
+	min-width: auto;
+	padding: 12px 16px;
+
+	&--active {
+		padding-right: 48px;
+		background-color: $grey50;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 18px;
+			height: 13px;
+			background-image: url('../img/icons/blue-tick.svg');
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 19px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.sort {
+		display: none;
+
+		&--tablet {
+			display: flex;
+			margin-bottom: 0;
+
+			.sort__container {
+				position: relative;
+				z-index: 2;
+			}
+
+			.sort__content {
+				z-index: 5;
+			}
+
+			.sort__list {
+				margin: 0;
+				padding-top: 40px;
+				position: absolute;
+				top: 10px;
+				background-color: $white;
+				z-index: -1;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+
+				// display: block;
+				display: none;
+			}
+
+			.sort__item {
+				min-width: 264px;
+			}
+
+			.sort__content-icon {
+				display: none;
+			}
+
+			.sort__arrow-icon {
+				display: block;
+			}
+
+			span {
+				@include textMediumRegular;
+				color: $grey800;
+				display: block;
+			}
+
+			.sort__content {
+				justify-content: space-between;
+				align-items: center;
+				min-width: 264px;
+				background-color: $transparent;
+				border: 1px solid $grey300;
+				padding: 12px 22px 12px 16px;
+			}
+		}
+	}
+}

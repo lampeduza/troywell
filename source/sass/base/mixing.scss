@@ -1,0 +1,1340 @@
+/* reset list */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* TYPOGRAPHY */
+/* base */
+@mixin spacing {
+  letter-spacing: -0.02em;
+}
+
+@mixin regular {
+  font-weight: $regular;
+}
+
+@mixin medium {
+  font-weight: $medium;
+}
+
+@mixin semibold {
+  font-weight: $semibold;
+}
+
+@mixin bold {
+  font-weight: $bold;
+}
+/* end base */
+
+
+
+/* TITLES (regular) */
+@mixin titleXxlRegular {
+  font-size: 72px;
+  line-height: 90px;
+  @include regular;
+  @include spacing;
+}
+
+@mixin titleXlRegular {
+  font-size: 60px;
+  line-height: 72px;
+  @include regular;
+  @include spacing;
+}
+
+@mixin titleLargeRegular {
+  font-size: 48px;
+  line-height: 60px;
+  @include regular;
+  @include spacing;
+}
+
+@mixin titleMediumRegular {
+  font-size: 36px;
+  line-height: 44px;
+  @include regular;
+  @include spacing;
+}
+
+@mixin titleSmallRegular {
+  font-size: 30px;
+  line-height: 38px;
+  @include regular;
+}
+
+@mixin titleExtraSmallRegular {
+  font-size: 24px;
+  line-height: 32px;
+  @include regular;
+}
+
+
+/* TEXT (regular) */
+@mixin textXlRegular {
+  font-size: 20px;
+  line-height: 30px;
+  @include regular;
+}
+
+@mixin textLargeRegular {
+  font-size: 18px;
+  line-height: 28px;
+  @include regular;
+}
+
+@mixin textMediumRegular {
+  font-size: 16px;
+  line-height: 24px;
+  @include regular;
+}
+
+@mixin textSmallRegular {
+  font-size: 14px;
+  line-height: 20px;
+  @include regular;
+}
+
+@mixin textExtraSmallRegular {
+  font-size: 12px;
+  line-height: 18px;
+  @include regular;
+}
+
+
+
+
+/* TITLES (medium) */
+@mixin titleXxlMedium {
+  font-size: 72px;
+  line-height: 90px;
+  @include medium;
+  @include spacing;
+}
+
+@mixin titleXlMedium {
+  font-size: 60px;
+  line-height: 72px;
+  @include medium;
+  @include spacing;
+}
+
+@mixin titleLargeMedium {
+  font-size: 48px;
+  line-height: 60px;
+  @include medium;
+  @include spacing;
+}
+
+@mixin titleMediumMedium {
+  font-size: 36px;
+  line-height: 44px;
+  @include medium;
+  @include spacing;
+}
+
+@mixin titleSmallMedium {
+  font-size: 30px;
+  line-height: 38px;
+  @include medium;
+}
+
+@mixin titleExtraSmallMedium {
+  font-size: 24px;
+  line-height: 32px;
+  @include medium;
+}
+
+
+/* TEXT (medium) */
+@mixin textXlMedium {
+  font-size: 20px;
+  line-height: 30px;
+  @include medium;
+}
+
+@mixin textLargeMedium {
+  font-size: 18px;
+  line-height: 28px;
+  @include medium;
+}
+
+@mixin textMediumMedium {
+  font-size: 16px;
+  line-height: 24px;
+  @include medium;
+}
+
+@mixin textSmallMedium {
+  font-size: 14px;
+  line-height: 20px;
+  @include medium;
+}
+
+@mixin textExtraSmallMedium {
+  font-size: 12px;
+  line-height: 18px;
+  @include medium;
+}
+
+@mixin textXlSemibold {
+  font-size: 20px;
+  line-height: 30px;
+  @include semibold;
+}
+
+
+
+/* TITLES (semibold) */
+@mixin titleXxlSemibold {
+  font-size: 72px;
+  line-height: 90px;
+  @include semibold;
+  @include spacing;
+}
+
+@mixin titleXlSemibold {
+  font-size: 60px;
+  line-height: 72px;
+  @include semibold;
+  @include spacing;
+}
+
+@mixin titleLargeSemibold {
+  font-size: 48px;
+  line-height: 60px;
+  @include semibold;
+  @include spacing;
+}
+
+@mixin titleMediumSemibold {
+  font-size: 36px;
+  line-height: 44px;
+  @include semibold;
+  @include spacing;
+}
+
+@mixin titleSmallSemibold {
+  font-size: 30px;
+  line-height: 38px;
+  @include semibold;
+}
+
+@mixin titleExtraSmallSemibold {
+  font-size: 24px;
+  line-height: 32px;
+  @include semibold;
+}
+
+
+/* TEXT (semibold) */
+@mixin textXlSemibold {
+  font-size: 20px;
+  line-height: 30px;
+  @include semibold;
+}
+
+@mixin textLargeSemibold {
+  font-size: 18px;
+  line-height: 28px;
+  @include semibold;
+}
+
+@mixin textMediumSemibold {
+  font-size: 16px;
+  line-height: 24px;
+  @include semibold;
+}
+
+@mixin textSmallSemibold {
+  font-size: 14px;
+  line-height: 20px;
+  @include semibold;
+}
+
+@mixin textExtraSmallSemibold {
+  font-size: 12px;
+  line-height: 18px;
+  @include semibold;
+}
+
+
+
+
+/* TITLES (bold) */
+@mixin titleXxlBold {
+  font-size: 72px;
+  line-height: 90px;
+  @include bold;
+  @include spacing;
+}
+
+@mixin titleXlBold {
+  font-size: 60px;
+  line-height: 72px;
+  @include bold;
+  @include spacing;
+}
+
+@mixin titleLargeBold {
+  font-size: 48px;
+  line-height: 60px;
+  @include bold;
+  @include spacing;
+}
+
+@mixin titleMediumBold {
+  font-size: 36px;
+  line-height: 44px;
+  @include bold;
+  @include spacing;
+}
+
+@mixin titleSmallBold {
+  font-size: 30px;
+  line-height: 38px;
+  @include bold;
+}
+
+@mixin titleExtraSmallBold {
+  font-size: 24px;
+  line-height: 32px;
+  @include bold;
+}
+
+
+/* TEXT (regular) */
+@mixin textXlBold {
+  font-size: 20px;
+  line-height: 30px;
+  @include bold;
+}
+
+@mixin textLargeBold {
+  font-size: 18px;
+  line-height: 28px;
+  @include bold;
+}
+
+@mixin textMediumBold {
+  font-size: 16px;
+  line-height: 24px;
+  @include bold;
+}
+
+@mixin textSmallBold {
+  font-size: 14px;
+  line-height: 20px;
+  @include bold;
+}
+
+@mixin textExtraSmallBold {
+  font-size: 12px;
+  line-height: 18px;
+  @include bold;
+}
+/* END TYPOGRAPHY */
+
+
+
+
+
+
+/* BUTTONS (blue) */
+
+/* base */
+@mixin similarButtonBlueStyles {
+  border-radius: 8px;
+  border: 1px solid #3A70F7;
+  background-color: #3A70F7;
+  color: $white;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@mixin hoverButtonBlue {
+  background-color: $primary600;
+  border: 1px solid $primary600;
+}
+
+@mixin focusActiveButtonBlue {
+  background-color: $primary400;
+  border: 1px solid $primary400;
+  box-shadow: 0px 0px 0px 2px #B8C1F7;
+}
+
+@mixin disabledButtonBlue {
+  background-color: $primary100;
+  border: 1px solid $primary100;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  cursor: auto;
+}
+/* end base */
+
+
+/* WITHOUT ICON */
+/* xxl size */
+@mixin xxlButtonBlueWithoutIcon {
+  @include textLargeMedium;
+  @include similarButtonBlueStyles;
+  padding: 14px 24px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* xl size */
+@mixin xlButtonBlueWithoutIcon {
+  @include textMediumMedium;
+  @include similarButtonBlueStyles;
+  padding: 12px 24px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* medium size */
+@mixin mediumButtonBlueWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonBlueStyles;
+  padding: 10px 16px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* small size */
+@mixin smallButtonBlueWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonBlueStyles;
+  padding: 6px 12px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+
+
+/* WITH ICON */
+/* xxl size */
+@mixin xxlButtonBlueWithIcon {
+  @include textLargeMedium;
+  @include similarButtonBlueStyles;
+  padding: 14px 24px 14px 60px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* xl size */
+@mixin xlButtonBlueWithIcon {
+  @include textMediumMedium;
+  @include similarButtonBlueStyles;
+  padding: 12px 16px 12px 48px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* medium size */
+@mixin mediumButtonBlueWithIcon {
+  @include textSmallMedium;
+  @include similarButtonBlueStyles;
+  padding: 10px 16px 10px 48px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+
+/* small size */
+@mixin smallButtonBlueWithIcon {
+  @include textSmallMedium;
+  @include similarButtonBlueStyles;
+  padding: 6px 12px 6px 44px;
+
+  &:hover {
+    @include hoverButtonBlue;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonBlue;
+  }
+
+  &--disabled {
+    @include disabledButtonBlue;
+  }
+}
+/* END BUTTONS (green) */
+
+
+/* BUTTONS (white) */
+/* base */
+@mixin similarButtonWhiteStyles {
+  border-radius: 8px;
+  border: 1px solid $grey300;
+  background-color: $white;
+  color: $grey700;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@mixin hoverButtonWhite {
+  background-color: $grey50;
+  border: 1px solid $grey300;
+}
+
+@mixin focusActiveButtonWhite {
+  background-color: $white;
+  border: 1px solid $grey300;
+  box-shadow: 0px 0px 0px 2px #F2F4F7;
+}
+
+@mixin disabledButtonWhite {
+  background-color: $white;
+  border: 1px solid $grey200;
+  box-shadow: none;
+  color: $grey300;
+  cursor: auto;
+}
+/* end base */
+
+
+/* WITHOUT ICON */
+/* xxl size */
+@mixin xxlButtonWhiteWithoutIcon {
+  @include textLargeMedium;
+  @include similarButtonWhiteStyles;
+  padding: 14px 24px;
+
+  &:hover {
+    @include hoverButtonWhite;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonWhite;
+  }
+
+  &--disabled {
+    @include disabledButtonWhite;
+  }
+}
+
+/* xl size */
+@mixin xlButtonWhiteWithoutIcon {
+  @include textMediumMedium;
+  @include similarButtonWhiteStyles;
+  padding: 12px 24px;
+
+  &:hover {
+    @include hoverButtonWhite;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonWhite;
+  }
+
+  &--disabled {
+    @include disabledButtonWhite;
+  }
+}
+
+/* medium size */
+@mixin mediumButtonWhiteWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonWhiteStyles;
+  padding: 10px 16px;
+
+  &:hover {
+    @include hoverButtonWhite;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonWhite;
+  }
+
+  &--disabled {
+    @include disabledButtonWhite;
+  }
+}
+
+/* small size */
+@mixin smallButtonWhiteWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonWhiteStyles;
+  padding: 6px 12px;
+
+  &:hover {
+    @include hoverButtonWhite;
+  }
+
+  &:focus,
+  &:active {
+    @include focusActiveButtonWhite;
+  }
+
+  &--disabled {
+    @include disabledButtonWhite;
+  }
+}
+
+
+
+/* WITH ICON */
+/* xxl size */
+@mixin xxlButtonWhiteWithIcon {
+  @include textLargeMedium;
+  @include similarButtonWhiteStyles;
+  padding: 14px 24px 14px 60px;
+}
+
+/* xl size */
+@mixin xlButtonWhiteWithIcon {
+  @include textMediumMedium;
+  @include similarButtonWhiteStyles;
+  padding: 12px 16px 12px 48px;
+}
+
+/* medium size */
+@mixin mediumButtonWhiteWithIcon {
+  @include textSmallMedium;
+  @include similarButtonWhiteStyles;
+  padding: 10px 16px 10px 48px;
+}
+
+/* small size */
+@mixin smallButtonWhiteWithIcon {
+  @include textSmallMedium;
+  @include similarButtonWhiteStyles;
+  padding: 6px 12px 6px 44px;
+}
+/* END BUTTONS (white) */
+
+
+
+/* BUTTONS (red) */
+/* base */
+@mixin similarButtonRedStyles {
+  border-radius: 8px;
+  border: 1px solid $error600;
+  background-color: $error600;
+  color: $white;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@mixin hoverButtonRed {
+  background-color: $error700;
+  border: 1px solid $error700;
+}
+
+@mixin focusActiveButtonRed {
+  background-color: $error600;
+  border: 1px solid $error600;
+  box-shadow: 0px 0px 0px 2px #FEE4E2;
+}
+
+@mixin disabledButtonRed {
+  background-color: $error200;
+  border: 1px solid $grey200;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  color: $white;
+}
+/* end base */
+
+
+/* WITHOUT ICON */
+/* xxl size */
+@mixin xxlButtonRedWithoutIcon {
+  @include textLargeMedium;
+  @include similarButtonRedStyles;
+  padding: 14px 24px;
+}
+
+/* xl size */
+@mixin xlButtonRedWithoutIcon {
+  @include textMediumMedium;
+  @include similarButtonRedStyles;
+  padding: 12px 24px;
+}
+
+/* medium size */
+@mixin mediumButtonRedWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonRedStyles;
+  padding: 10px 16px;
+}
+
+/* small size */
+@mixin smallButtonRedWithoutIcon {
+  @include textSmallMedium;
+  @include similarButtonRedStyles;
+  padding: 6px 12px;
+}
+
+/* END BUTTONS (red) */
+
+/* BLUE BUTTON */
+@mixin blueButton {
+  @include textMediumMedium;
+  display: block;
+  text-align: center;
+  color: $white;
+  width: 100%;
+  padding: 12px;
+  background-color: #3A70F7;
+  border-radius: 8px;
+}
+/* END BLUE BUTTON */
+
+@mixin useButton {
+  color: $primary500;
+  background-color: $white;
+  border: 1px solid $primary500;
+  padding: 9px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+}
+
+/* SOCIAL LONG BUTTONS */
+@mixin longButton {
+  @include textSmallMedium;
+  color: $grey700;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  border: 1px solid $grey300;
+  border-radius: 8px;
+}
+/* END SOCIAL LONG BUTTONS */
+
+/* BUTTONS ICONS */
+@mixin smallButtonClose {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background-color: $transparent;
+
+  @media (min-width: 480px) {
+    top: 32px;
+    right: 32px;
+  }
+}
+
+@mixin smallButtonBack {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 16px;
+
+  @media (min-width: 480px) {
+    top: 32px;
+    left: 32px;
+  }
+}
+
+@mixin protectedButton {
+  display: flex;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $transparent;
+  border: none;
+  padding: 0;
+}
+/* END BUTTONS ICONS */
+
+/* SEE ALL BUTTON */
+@mixin expandButton {
+  @include textSmallMedium;
+  color: $grey600;
+  display: block;
+  border: 1px solid $grey200;
+  width: 100%;
+  text-align: center;
+  padding: 9px;
+  border-radius: 16px;
+}
+/* END SEE ALL BUTTON */
+
+
+/* BUTTONS like links */
+/* base */
+@mixin similarLinkStyles {
+  color: $grey500;
+  padding: 0;
+  border: none;
+  background-color: $transparent;
+}
+
+@mixin hoverLink {
+  color: $grey600;
+}
+
+@mixin focusActiveLink {
+  color: $grey500;
+}
+
+@mixin disableLink {
+  color: $grey300;
+}
+/* end base */
+
+/* large social link */
+@mixin largeLink {
+  @include similarLinkStyles;
+  @include textLargeMedium;
+}
+
+/* medium social link */
+@mixin mediumLink {
+  @include similarLinkStyles;
+  @include textMediumMedium;
+}
+
+/* small social link */
+@mixin smallLink {
+  @include similarLinkStyles;
+  @include textSmallMedium;
+}
+/* END BUTTONS like links */
+/* END BUTTONS */
+
+
+
+/* INPUTS */
+@mixin input {
+  @include textMediumRegular;
+  width: 100%;
+  background-color: $white;
+  padding: 12px 14px;
+  border: 1px solid $grey300;
+  border-radius: 8px;
+  color: $grey500;
+
+  &::placeholder {
+    color: $grey500;
+  }
+}
+
+@mixin inputState {
+  &:hover {
+    color: $grey900;
+
+    &::placeholder {
+      color: $grey900;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $grey900;
+    outline: 1px solid $primary100;
+    border-color: $primary100;
+
+    &::placeholder {
+      color: $grey900;
+    }
+  }
+
+  &:invalid {
+    border-color: $error300;
+    outline: none;
+    position: relative;
+
+    &:focus,
+    &:active {
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FEE4E2;
+    }
+  }
+
+  &--disabled {
+    color: $grey500;
+    background-color: $grey50;
+    border-color: $grey300;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+}
+
+/* blue checkbox */
+@mixin checkboxBlue {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid #3A70F7;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* blue tick */
+@mixin tickBlue {
+  content: '';
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-image: url('../img/icons/tick.svg');
+  background-size: 12px, 9px;
+  background-repeat: no-repeat;
+}
+
+/* blue tick big */
+@mixin bigBlueTick {
+  content: '';
+  width: 18px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  background-image: url('../img/icons/navigation-tick.svg');
+  background-size: 18px, 13px;
+  background-repeat: no-repeat;
+}
+
+/* grey checkbox */
+@mixin checkboxGrey {
+  @include checkboxBlue;
+  border-color: $grey300;
+}
+
+/* tick */
+@mixin tickGrey {
+  content: '';
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-image: url('../img/icons/tick-grey.svg');
+  background-size: 12px, 9px;
+  background-repeat: no-repeat;
+}
+
+/* hamburger */
+@mixin hamburger {
+  background-image: url('../img/icons/hamburger.svg');
+  background-size: 20px, 14px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 14px;
+}
+
+/* diamond */
+@mixin mobileDiamond {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/mobile/diamond.png');
+  background-size: 20px, 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/mobile/diamond@2x.png');
+    background-size: 20px, 20px;
+  }
+
+}
+
+/* diamond*/
+@mixin searchDiamond {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/mobile/medium-diamond.png');
+  background-size: 16px, 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/mobile/medium-diamond@2x.png');
+    background-size: 16px, 16px;
+  }
+}
+
+/* diamond*/
+@mixin mediumDiamond {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background-image: url('../img/mobile/medium-diamond.png');
+  background-size: 18px, 18px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/mobile/medium-diamond@2x.png');
+    background-size: 18px, 18px;
+  }
+}
+
+/* diamond */
+@mixin bigMobileDiamond {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/mobile/diamond-big.png');
+  background-size: 24px, 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/mobile/diamond-big@2x.png');
+    background-size: 24px, 24px;
+  }
+}
+
+/* biggest diamond */
+@mixin biggestDiamond {
+  content: '';
+  width: 112px;
+  height: 112px;
+  background-image: url('../img/tablet/biggest-diamond.png');
+  background-size: 112px, 112px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/tablet/biggest-diamond@2x.png');
+    background-size: 112px, 112px;
+  }
+}
+
+/* mobile coupon */
+@mixin mobileCoupon {
+  content: '';
+  width: 18px;
+  height: 18px;
+  // Нужна ретинизация изображения
+  background-image: url('../img/icons/coupon.svg');
+  background-size: 18px, 18px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+/* coupon search */
+@mixin couponSearch {
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-image: url('../img/icons/coupon-search.svg');
+  background-size: 16px, 15px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+}
+
+@mixin clockPicture {
+  content: '';
+  background-image: url('../img/icons/mobile-clock.png');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/icons/mobile-clock@2x.png');
+    background-size: 16px, 16px;
+  }
+}
+
+@mixin fire {
+  content: '';
+  background-image: url('../img/icons/fire-mobile.png');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/icons/fire-mobile@2x.png');
+    background-size: 16px, 16px;
+  }
+}
+
+@mixin arrowDown {
+  content: '';
+  width: 14px;
+  height: 8px;
+  background-image: url('../img/icons/arrow-down.svg');
+  background-size: 14px, 8px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 22px;
+}
+
+@mixin new {
+  @include textExtraSmallMedium;
+  content: 'New';
+  color: $success700;
+  background-color: $success50;
+  padding: 3px 8px;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -52px;
+}
+
+@mixin breadcrumbsArrow {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 10px;
+  background-image: url(../img/icons/breadcrumbs-arrow.svg);
+  background-repeat: no-repeat;
+}
+
+// switcher
+@mixin switcherMiddle {
+  cursor: pointer;
+  outline: none;
+
+  &::before {
+    content: '';
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $grey100;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    transition: background .2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $grey200;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::before {
+      box-shadow: 0px 0px 0px 2px #B8C1F7;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+    position: absolute;
+    top: 18px;
+    left: 19px;
+    transition: left .3s;
+  }
+
+  &--disabled {
+    &::after {
+      background-color: $grey50;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &::before {
+      top: 0px;
+      left: 0px;
+    }
+
+    &::after {
+      top: 34px;
+      left: 26px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &::before {
+      top: 24px;
+      left: 24px;
+    }
+
+    &::after {
+      top: 26px;
+      left: 26px;
+    }
+  }
+}
+
+// switcher
+@mixin switcherSmall {
+  cursor: pointer;
+  outline: none;
+
+  &::before {
+    content: '';
+    width: 36px;
+    height: 20px;
+    border-radius: 12px;
+    background-color: $grey100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background .2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $grey200;
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::before {
+      box-shadow: 0px 0px 0px 2px #B8C1F7;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left .3s;
+  }
+
+  &--disabled {
+    &::after {
+      background-color: $grey50;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &::before {
+      top: 0px;
+      left: 0px;
+    }
+
+    &::after {
+      top: 2px;
+      left: 2px;
+    }
+  }
+}

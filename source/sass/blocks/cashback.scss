@@ -1,0 +1,59 @@
+.cashback__wrapper {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	position: relative;
+}
+
+.cashback__link {
+  display: block;
+}
+
+.cashback__picture {
+	display: block;
+}
+
+.cashback__image {
+	object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.cashback__title {
+	@include titleExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	position: absolute;
+	top: 48px;
+	left: 40px;
+	max-width: 253px;
+}
+
+@media (min-width: 1024px) {
+	.cashback__wrapper {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.cashback__title {
+		@include titleSmallSemibold;
+		color: $grey800;
+		max-width: 100%;
+		left: 77px;
+		top: 86px;
+		padding-right: 500px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.cashback__wrapper {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.cashback__title {
+		padding-right: 800px;
+		top: 88px;
+		left: 156px;
+	}
+}

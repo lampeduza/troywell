@@ -1,0 +1,50 @@
+.social__title {
+	@include textMediumMedium;
+	color: $grey500;
+	margin: 0;
+	margin-right: 24px;
+}
+
+.social__list {
+	@include reset-list;
+	display: flex;
+}
+
+.social__item {
+	margin-right: 24px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+	.social {
+		margin-left: auto;
+	}
+
+	.social__title {
+		@include textSmallMedium;
+		margin-right: 10px;
+	}
+
+	.social__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.social__item {
+		margin-right: 12px;
+	}
+
+	.social__link {
+		display: flex;
+	}
+}
+
+@media (min-width: 1440px) {
+	.social__title {
+		@include textMediumMedium;
+		margin-right: 12px;
+	}
+}

@@ -1,0 +1,711 @@
+.shopping__wrapper {
+	padding-top: 24px;
+	overflow: hidden;
+}
+
+.shopping__user-bar {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.shopping__user-link {
+	display: none;
+	align-items: center;
+	@include textSmallMedium;
+	color: $primary500;
+
+	svg {
+		margin-right: 13px;
+	}
+}
+
+.shopping__user-list {
+	@include reset-list;
+	display: flex;
+	align-items: center;
+}
+
+.shopping__user-item {
+	margin-right: 30px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&--tablet {
+		display: none;
+	}
+}
+
+.shopping__user-button {
+	display: flex;
+	border: none;
+	background-color: $transparent;
+	padding: 0;
+}
+
+.shopping__title {
+	@include titleExtraSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.shopping__rating {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+
+	svg {
+		margin-right: 4px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+.shopping__mark {
+	@include textSmallMedium;
+	color: $grey800;
+	margin-left: 8px;
+}
+
+.shopping__reviews {
+	@include textSmallMedium;
+	color: $grey500;
+	margin-left: 8px;
+}
+
+.shopping__left-about {
+	display: none;
+}
+
+.shopping__card {
+	display: block;
+	background-color: $grey100;
+	border-radius: 16px;
+	padding: 16px;
+	margin-bottom: 12px;
+}
+
+.shopping__card-heart {
+	display: none;
+}
+
+.shopping__card-picture {
+	display: block;
+	margin-bottom: 24px;
+}
+
+.shopping__card-info-title,
+.shopping__card-info-coupons {
+	display: none;
+}
+
+.shopping__similar {
+	display: none;
+}
+
+.shopping__card-list {
+	@include reset-list;
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.shopping__card-item {
+	margin-right: 32px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.shopping__card-cashback {
+	@include textSmallMedium;
+	color: $grey700;
+	padding-left: 28px;
+	margin: 0;
+	position: relative;
+
+	&::before {
+		@include mobileDiamond;
+	}
+}
+
+.shopping__card-coupons {
+	@include textSmallMedium;
+	color: $primary500;
+	padding-left: 28px;
+	margin: 0;
+	position: relative;
+
+	&::before {
+		@include mobileCoupon;
+	}
+}
+
+.shopping__card-panel {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopping__card-activate {
+	@include blueButton;
+	@include textSmallMedium;
+	padding: 11px;
+	border-radius: 100px;
+	width: 255px;
+
+	&:hover {
+		background-color: $primary600;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $primary400;
+	}
+}
+
+.shopping__card-share {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	background-color: $white;
+	border: 1px solid $grey200;
+	border-radius: 50%;
+}
+
+.shopping__right {
+	margin-top: 24px;
+
+	&--coupons-without-cashback {
+		.shopping__right-info {
+			display: none;
+		}
+
+		.available__title {
+			display: block;
+			&--tablet {
+				display: none;
+			}
+		}
+
+		.available__open {
+
+			&--use {
+				@include useButton;
+			}
+		}
+	}
+
+	&--coupons-without-cashback-and-reviews {
+		.reviews__area {
+			border: 1px solid $grey200;
+			border-radius: 16px;
+			padding: 16px;
+		}
+
+		.reviews__no-reviews-title {
+			@include textMediumMedium;
+			color: $grey700;
+			margin: 0;
+			margin-bottom: 16px;
+		}
+
+		.reviews__try {
+			@include textSmallRegular;
+			color: $grey500;
+			margin: 0;
+			margin-bottom: 24px;
+		}
+
+		.reviews__feedback {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 9px 57px;
+			border: 1px solid $primary500;
+			background-color: $primary500;
+			color: $white;
+		}
+
+		.reviews__feedback-icon {
+			margin-right: 10px;
+		}
+
+		.available__open {
+
+			&--use {
+				@include useButton;
+			}
+		}
+	}
+}
+
+.shopping__right-info {
+	border: 1px solid $grey200;
+	border-radius: 16px;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.shopping__right-title {
+	@include textLargeSemibold;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.shopping__right-text {
+	@include textExtraSmallRegular;
+	color: $grey400;
+	margin: 0;
+}
+
+.shopping__proviso {
+	color: $primary400;
+}
+
+.shopping__right-activate {
+	display: none;
+
+
+}
+
+@media (min-width: 1024px) {
+	.shopping__wrapper {
+		padding-bottom: 80px;
+		position: relative;
+	}
+
+	.shopping__index-columns {
+		display: flex;
+		justify-content: space-between;
+		gap: 56px;
+	}
+
+	.shopping__user-bar {
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	.shopping__user-link {
+		display: flex;
+	}
+
+	.shopping__user-list {
+		gap: 12px;
+
+		position: absolute;
+		top: 84px;
+		right: 40px;
+	}
+
+	.shopping__user-item {
+		margin: 0;
+
+		&--mobile {
+			display: none;
+		}
+
+		&--tablet {
+			display: block;
+		}
+
+		&--social {
+			.shopping__user-item-link {
+				padding: 9px;
+			}
+		}
+	}
+
+	.shopping__user-item-link {
+		@include textSmallMedium;
+		color: $grey700;
+		display: flex;
+		align-items: center;
+		border: 1px solid $grey300;
+		border-radius: 100px;
+		padding: 9px 16px;
+
+		&:hover {
+			background-color: $grey50;
+			border: 1px solid $grey300;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: 0px 0px 0px 2px #F2F4F7;
+		}
+	}
+
+	.shopping__user-copy {
+		margin-right: 11px;
+	}
+
+	.shopping__title {
+		@include titleSmallSemibold;
+	}
+
+	.shopping__rating {
+		margin-bottom: 40px;
+	}
+
+	.shopping__mark {
+		@include textMediumMedium;
+	}
+
+	.shopping__reviews {
+		color: $grey500;
+	}
+
+	.shopping__left {
+		width: 32.20%;
+	}
+
+	.shopping__card {
+		background-color: $transparent;
+		border: 1px solid $grey200;
+		margin-bottom: 40px;
+		padding: 24px;
+
+		position: relative;
+	}
+
+	.shopping__card-image {
+		width: 208px;
+		height: 76px;
+	}
+
+	.shopping__card-heart {
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		padding: 0;
+		border: none;
+		background-color: $transparent;
+
+		position: absolute;
+		top: 27px;
+		right: 26px;
+	}
+
+	.shopping__card-info {
+		background-color: $grey100;
+		padding: 12px;
+		margin-bottom: 24px;
+		border-radius: 8px;
+	}
+
+	.shopping__card-info-title,
+	.shopping__card-info-coupons {
+		display: flex;
+		margin: 0;
+	}
+
+	.shopping__card-info-title {
+		@include textSmallSemibold;
+		margin-bottom: 4px;
+	}
+
+	.shopping__card-info-coupons {
+		@include textExtraSmallRegular;
+	}
+
+	.shopping__card-item {
+		&:last-child {
+			display: none;
+		}
+	}
+
+	.shopping__card-cashback {
+		@include textExtraSmallSemibold;
+		color: $grey800;
+		padding-left: 32px;
+		&::before {
+			@include bigMobileDiamond;
+		}
+	}
+
+	.shopping__card-panel {
+		align-items: center;
+	}
+
+	.shopping__card-activate {
+		width: 188px;
+	}
+
+	.shopping__card-share {
+		background-color: #F2F4F7;
+		border: none;
+	}
+
+	.shopping__left-about {
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	.shopping__left-about-title,
+	.shopping__similar-head {
+		@include textMediumSemibold;
+		color: $grey800;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.shopping__left-about-text {
+		@include textMediumRegular;
+		color: $grey500;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	.shopping__left-about-link {
+		@include textSmallMedium;
+		color: $primary500;
+	}
+
+	.shopping__similar {
+		display: block;
+	}
+
+	.shopping__similar-title {
+		@include textSmallMedium;
+		color: $grey700;
+	}
+
+	.shopping__similar-list {
+		@include reset-list;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.shopping__similar-link {
+		display: flex;
+	}
+
+	.shopping__similar-picture {
+		margin-right: 12px;
+		width: auto;
+	}
+
+	.shopping__similar-title {
+		margin: 0;
+		margin-bottom: 2px;
+	}
+
+	.shopping__similar-cashback {
+		@include textExtraSmallMedium;
+		color: $grey500;
+		margin: 0;
+		padding-left: 22px;
+		position: relative;
+
+		&::before {
+			@include mediumDiamond;
+		}
+	}
+
+	.shopping__right {
+		width: 61.86%;
+		margin-top: 0;
+
+		&--coupons-without-cashback {
+
+			.available__title {
+				display: none;
+				&--tablet {
+					display: block;
+				}
+			}
+		}
+
+		&--coupons-without-cashback-and-reviews {
+			.available {
+				padding-bottom: 56px;
+			}
+
+			.available__title {
+
+				&--tablet {
+					display: block;
+				}
+			}
+
+			.reviews__area {
+				padding: 32px;
+			}
+
+			.reviews__feedback {
+				position: static;
+				width: 248px;
+			}
+
+			.reviews__feedback-icon {
+				color: $grey700;
+			}
+		}
+
+		&--coupons-and-stocks {
+			.available__area-add {
+				width: 315px;
+				justify-content: initial;
+				padding: 9px 21px 9px 24px;
+			}
+
+			.reviews__feedback-icon {
+				color: $white;
+			}
+		}
+	}
+
+	.shopping__right-info {
+		padding: 32px 32px 32px 176px;
+		margin-bottom: 38px;
+		position: relative;
+
+		&::before {
+			@include biggestDiamond;
+		}
+	}
+
+	.shopping__right-text {
+		@include textExtraSmallMedium;
+		margin-bottom: 16px;
+	}
+
+	.shopping__right-activate {
+		@include blueButton;
+		@include textSmallMedium;
+		width: 50%;
+		border: none;
+		border-radius: 100px;
+		padding: 10px;
+
+		&:hover {
+			background-color: $primary600;
+		}
+
+		&:focus,
+		&:active {
+			background-color: $primary400;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.shopping__title {
+		@include titleMediumSemibold;
+	}
+
+	.shopping__user-list {
+		right: 108px;
+	}
+
+	.shopping__index-columns {
+		gap: 128px;
+	}
+
+	.shopping__left {
+		width: 288px;
+	}
+
+	.shopping__card {
+		border: none;
+		background-color: $grey100;
+		padding: 24px 22px;
+	}
+
+	.shopping__card-image {
+		width: 161px;
+		height: 64px;
+	}
+
+	.shopping__card-info {
+		display: none;
+	}
+
+	.shopping__card-item {
+		&:last-child {
+			display: block;
+		}
+	}
+
+	.shopping__card-cashback {
+		@include textSmallMedium;
+		padding-left: 28px;
+
+		&::before {
+			@include mobileDiamond;
+		}
+	}
+
+	.shopping__card-share {
+		background-color: $white;
+	}
+
+	.shopping__right {
+		width: 808px;
+
+		&--coupons-without-cashback {
+			.available__expand {
+				display: block;
+				padding: 15px;
+			}
+		}
+
+		&--coupons-without-cashback-and-reviews {
+			.available {
+				padding-bottom: 0;
+			}
+			
+			.reviews {
+				padding-bottom: 80px;
+			}
+
+			.reviews__feedback-icon {
+				color: $white;
+			}
+
+			.available__expand {
+				display: block;
+			}
+		}
+
+		&--coupons-and-stocks {
+			.reviews__feedback-icon {
+				color: $grey700;
+			}
+		}
+
+/*
+		&--coupons-without-cashback-and-reviews {
+			.reviews__area {
+				border: 1px solid $grey200;
+			}
+
+			.reviews__no-reviews-title {
+				@include textMediumMedium;
+				margin: 0;
+				margin-bottom: 16px;
+			}
+		}
+
+		*/
+	}
+
+	.shopping__right-activate {
+		width: 188px;
+	}
+
+	.shopping__right-info {
+		margin-bottom: 56px;
+	}
+}

@@ -1,0 +1,143 @@
+.offer__title {
+	@include textXlSemibold;
+	margin: 0;
+	margin-bottom: 24px;
+	color: $grey800;
+}
+
+.offer__list {
+	@include reset-list;
+	margin-bottom: 24px;
+}
+
+.offer__item {
+	padding: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+	border-radius: 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.offer__item-picture {
+	width: auto;
+	margin-right: 12px;
+}
+
+.offer__item-image {
+	&--ellipse {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.offer__item-value {
+	margin-right: auto;
+}
+
+.offer__item-title {
+	@include textSmallMedium;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.offer__item-coupons {
+	@include textExtraSmallRegular;
+	display: flex;
+	align-items: center;
+	color: $grey400;
+
+	svg {
+		fill: $grey700;
+		margin-right: 4px;
+	}
+}
+
+.offer__button {
+	@include textSmallMedium;
+	font-family: inherit;
+	color: #ffffff;
+	background-color: $primary500;
+	padding: 5px 11px;
+	border: 1px solid $primary500;
+	border-radius: 100px;
+
+	&--signed {
+		border: 1px solid $primary500;
+		color: $primary500;
+		background-color: transparent;
+	}
+}
+
+@media (min-width: 1024px) {
+	.offer__title {
+		color: $grey900;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 400;
+		margin-bottom: 24px;
+	}
+
+	.offer__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+	}
+
+	.offer__item {
+		padding: 24px 8px 24px 16px;
+		margin-bottom: 24px;
+		margin-right: 24px;
+		width: calc(100% / 2 - 12px);
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 24px;
+		}
+	}
+
+	.offer__item-picture {
+		margin-right: auto;
+	}
+
+	.offer__item-image {
+		width: 70px;
+		height: 30px;
+	}
+
+	.offer__button {
+		font-weight: 700;
+	}
+
+	.offer__pagination {
+		margin-top: 11px;
+		margin-bottom: 16px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.offer__title {
+		@include titleExtraSmallSemibold;
+		color: $grey800;
+	}
+
+	.offer__item {
+		padding: 24px;
+	}
+
+	.offer__item-picture {
+		margin-right: 12px;
+	}
+
+	.offer__button {
+		font-weight: 500;
+	}
+}

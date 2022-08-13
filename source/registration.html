@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Troywell | Registration</title>
+</head>
+<body class="body-registration">
+
+   <svg style="display: none">
+
+   	<!-- google -->
+     <symbol id="google" viewBox="0 0 25 24">
+     	<g clip-path="url(#clip0_1246_9190)">
+				<path d="M18.3127 12C18.3136 13.3678 17.8318 14.6921 16.952 15.7395C16.0723 16.787 14.8512 17.4903 13.5038 17.7257C12.1563 17.9611 10.769 17.7134 9.58632 17.0262C8.40361 16.3391 7.50134 15.2566 7.03847 13.9694L3.71387 16.6291C4.74763 18.5942 6.41002 20.1563 8.43559 21.0659C10.4612 21.9755 12.7331 22.1802 14.8886 21.6473C17.0442 21.1144 18.959 19.8746 20.3274 18.1259C21.6957 16.3772 22.4387 14.2204 22.4377 12" fill="#00AC47"/>
+				<path d="M18.3127 12C18.312 12.9248 18.0903 13.8359 17.6661 14.6577C17.2419 15.4794 16.6275 16.1878 15.874 16.724L19.1608 19.3535C20.1915 18.4255 21.0157 17.2915 21.5802 16.0247C22.1447 14.758 22.4368 13.3868 22.4377 12" fill="#4285F4"/>
+				<path d="M6.6875 12C6.68894 11.3281 6.80764 10.6616 7.03827 10.0306L3.71367 7.37091C2.95774 8.79679 2.5625 10.3861 2.5625 12C2.5625 13.6139 2.95774 15.2032 3.71367 16.6291L7.03827 13.9694C6.80764 13.3383 6.68894 12.6719 6.6875 12Z" fill="#FFBA00"/>
+				<path d="M12.5002 6.18751C13.7301 6.18785 14.9277 6.58088 15.9187 7.30936L18.9637 4.46738C17.8333 3.4928 16.4975 2.78608 15.0558 2.39995C13.6142 2.01382 12.1039 1.95826 10.6378 2.23741C9.17164 2.51656 7.78747 3.12322 6.58857 4.01211C5.38967 4.901 4.40699 6.04916 3.71387 7.37093L7.03847 10.0306C7.44393 8.90661 8.18568 7.93477 9.16288 7.24717C10.1401 6.55957 11.3053 6.18959 12.5002 6.18751Z" fill="#EA4435"/>
+				<path d="M22.4375 11.25V12L20.75 14.625H12.875V10.5H21.6875C21.8864 10.5 22.0772 10.579 22.2178 10.7197C22.3585 10.8603 22.4375 11.0511 22.4375 11.25Z" fill="#4285F4"/>
+			</g>
+			<defs>
+			<clipPath id="clip0_1246_9190">
+			<rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+			</clipPath>
+			</defs>
+     </symbol>
+
+     <!-- vk -->
+     <symbol id="vk" viewBox="0 0 25 24">
+     	<rect width="24" height="24" transform="translate(0.5)" fill="white"/>
+			<path d="M23.3817 17.601C22.4832 15.984 20.1687 14.041 19.2132 13.1955C18.9517 12.964 18.9237 12.5635 19.1617 12.3075C20.9852 10.348 22.4437 8.09651 22.9457 6.73601C23.1672 6.13501 22.7087 5.50001 22.0627 5.50001H20.1862C19.5677 5.50001 19.2057 5.72201 19.0332 6.07551C17.5177 9.18101 16.2177 10.525 15.3077 11.3105C14.7982 11.7505 14.0037 11.386 14.0037 10.7165C14.0037 9.42651 14.0037 7.75901 14.0037 6.57651C14.0037 6.00301 13.5347 5.53901 12.9562 5.53901L9.52819 5.50001C9.09669 5.50001 8.85019 5.98851 9.10919 6.33101L9.67519 7.14351C9.88819 7.42501 10.0032 7.76751 10.0032 8.11901L10.0002 11.778C10.0002 12.4145 9.22869 12.7255 8.77069 12.2795C7.22119 10.7705 5.87669 7.68901 5.39269 6.21551C5.25269 5.78901 4.85319 5.50101 4.40019 5.50001L2.55169 5.49551C1.85819 5.49551 1.35119 6.15301 1.53969 6.81501C3.22869 12.7435 6.69419 18.3835 12.8702 18.995C13.4787 19.055 14.0037 18.565 14.0037 17.9585V16.0355C14.0037 15.484 14.4362 15.01 14.9922 14.996C15.0117 14.9955 15.0312 14.9955 15.0507 14.9955C16.6842 14.9955 18.5137 17.373 19.1537 18.485C19.3377 18.805 19.6817 19 20.0537 19H22.5402C23.2657 19 23.7312 18.2305 23.3817 17.601Z" fill="#2787F5"/>
+     </symbol>
+
+     <!-- ok -->
+    <symbol id="ok" viewBox="0 0 24 24">
+    	<path d="M17.8301 12.74C17.5501 12.17 16.7601 11.69 15.7101 12.5C14.2801 13.64 12.0001 13.64 12.0001 13.64C12.0001 13.64 9.72005 13.64 8.29005 12.5C7.24005 11.69 6.45005 12.17 6.17005 12.74C5.67005 13.74 6.23005 14.23 7.50005 15.04C8.59005 15.74 10.0801 16 11.0401 16.1L10.2401 16.9C9.10005 18.03 8.00005 19.12 7.25005 19.88C6.80005 20.34 6.80005 21.07 7.25005 21.5L7.39005 21.66C7.84005 22.11 8.58005 22.11 9.03005 21.66L12.0001 18.68C13.1501 19.81 14.2401 20.9 15.0001 21.66C15.4501 22.11 16.18 22.11 16.64 21.66L16.7701 21.5C17.2301 21.07 17.2301 20.34 16.7701 19.88L13.7901 16.9L13.0001 16.09C13.9501 16 15.4201 15.73 16.5001 15.04C17.7701 14.23 18.3301 13.74 17.8301 12.74ZM12.0001 4.57C13.3801 4.57 14.5001 5.69 14.5001 7.06C14.5001 8.44 13.3801 9.55 12.0001 9.55C10.6201 9.55 9.50005 8.44 9.50005 7.06C9.50005 5.69 10.6201 4.57 12.0001 4.57ZM12.0001 12.12C14.8001 12.12 17.0601 9.86 17.0601 7.06C17.0601 4.27 14.8001 2 12.0001 2C9.20005 2 6.94005 4.27 6.94005 7.06C6.94005 9.86 9.20005 12.12 12.0001 12.12Z" fill="#FFAB49"/>
+    </symbol>
+
+    <!-- back small -->
+    <symbol id="back-small" viewBox="0 0 16 16">
+    	<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="#344054" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- close small -->
+    <symbol id="close-small" viewBox="0 0 16 16">
+    	<path d="M14 2L2 14M2 2L14 14" stroke="#344054" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- protected (eye) -->
+    <symbol id="protected" viewBox="0 0 20 20">
+    	<path d="M3.27522 14.0687L4.16897 13.1812C3.19036 12.3026 2.42146 11.2154 1.91897 10C3.18772 6.83125 6.68772 4.375 10.0002 4.375C10.8527 4.38625 11.6974 4.5383 12.5002 4.825L13.469 3.85C12.3706 3.38583 11.1925 3.13959 10.0002 3.125C7.96304 3.20161 5.99296 3.87347 4.33347 5.05755C2.67398 6.24163 1.39782 7.88603 0.662722 9.7875C0.613077 9.92482 0.613077 10.0752 0.662722 10.2125C1.21788 11.6856 2.11299 13.0069 3.27522 14.0687Z" fill="#667085"/>
+			<path d="M7.49987 9.83125C7.54333 9.23232 7.80093 8.66905 8.22555 8.24443C8.65017 7.81981 9.21344 7.56221 9.81237 7.51875L10.9436 6.38125C10.3097 6.21434 9.64314 6.21651 9.01034 6.38754C8.37755 6.55857 7.80063 6.89249 7.33712 7.356C6.87361 7.81951 6.53969 8.39642 6.36866 9.02922C6.19763 9.66202 6.19546 10.3286 6.36237 10.9625L7.49987 9.83125Z" fill="#667085"/>
+			<path d="M19.3375 9.7875C18.6208 7.92075 17.3738 6.30439 15.75 5.1375L18.75 2.13125L17.8687 1.25L1.25 17.8687L2.13125 18.75L5.31875 15.5625C6.73992 16.3963 8.35253 16.8484 10 16.875C12.0372 16.7984 14.0073 16.1265 15.6667 14.9424C17.3262 13.7584 18.6024 12.114 19.3375 10.2125C19.3871 10.0752 19.3871 9.92482 19.3375 9.7875ZM12.5 10C12.4974 10.4376 12.3799 10.8668 12.1594 11.2447C11.9389 11.6227 11.6231 11.9361 11.2435 12.1538C10.8639 12.3714 10.4338 12.4856 9.99625 12.485C9.55868 12.4843 9.12894 12.3688 8.75 12.15L12.15 8.75C12.3747 9.12858 12.4954 9.55978 12.5 10ZM10 15.625C8.68879 15.6021 7.40243 15.2634 6.25 14.6375L7.8375 13.05C8.55959 13.551 9.43471 13.7825 10.3101 13.704C11.1855 13.6256 12.0055 13.2421 12.6269 12.6207C13.2484 11.9992 13.6318 11.1792 13.7103 10.3038C13.7888 9.42846 13.5573 8.55333 13.0562 7.83125L14.85 6.0375C16.2841 7.02186 17.4056 8.39714 18.0812 10C16.8125 13.1687 13.3125 15.625 10 15.625Z" fill="#667085"/>
+    </symbol>
+   </svg>
+
+	<!-- authentication ENTER OR REGISTRATION SECTION -->
+	<section class="enter-or-registration">
+		<div class="enter-or-registration__wrapper container">
+			<h1 class="enter-or-registration__title">Войдите или<br>зарегистрируйтесь</h1>
+			<button class="enter-or-registration__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<ul class="enter-or-registration__links-list">
+				<li class="enter-or-registration__links-item">
+					<a class="enter-or-registration__links-link" href="#">
+						<svg width="25" height="24">
+							<use xlink:href="#google"></use>
+						</svg>
+					Войти с помощью Google
+				</a>
+				</li>
+				<li class="enter-or-registration__links-item">
+					<a class="enter-or-registration__links-link" href="#">
+						<svg width="25" height="24">
+							<use xlink:href="#vk"></use>
+						</svg>
+						Войти с помощью VK
+				</a>
+				</li>
+				<li class="enter-or-registration__links-item">
+					<a class="enter-or-registration__links-link" href="#">
+						<svg width="24" height="24">
+							<use xlink:href="#ok"></use>
+						</svg>
+						Войти с помощью OK
+				</a>
+				</li>
+			</ul>
+
+			<ul class="enter-or-registration__variants-list">
+				<li class="enter-or-registration__variants-item enter-or-registration__variants-item--current">
+					<button class="enter-or-registration__variants-button" type="button">Вход</button>
+				</li>
+				<li class="enter-or-registration__variants-item">
+					<button class="enter-or-registration__variants-button" type="button">Регистрация</button>
+				</li>
+			</ul>
+
+			<form class="enter-or-registration__form" action="" method="post">
+				<fieldset class="enter-or-registration__set">
+					<legend class="visually-hidden">Форма входа</legend>
+
+					<div class="input-container">
+						<label class="enter-or-registration__label" for="email-field">Email</label>
+						<input class="enter-or-registration__input" type="text" name="email" id="email-field" placeholder="Email или логин" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="enter-or-registration__container">
+						<div class="input-container">
+							<label class="enter-or-registration__label" for="password-field">Повторите пароль</label>
+							<input class="enter-or-registration__input enter-or-registration__input--password" type="password" name="password" id="password-field" placeholder="••••••••" required>
+							<!-- <span class="validity-icon"></span> -->
+						</div>
+
+						<button class="enter-or-registration__protected-button" type="button">
+							<svg width="20" height="20">
+								<use xlink:href="#protected"></use>
+							</svg>
+						</button>
+					</div>
+				</fieldset>
+
+				<p class="enter-or-registration__remember">
+					<input class="enter-or-registration__remember-checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox-field">
+					<label class="enter-or-registration__remember-label" for="checkbox-field">Запомнить данные</label>
+					<a class="enter-or-registration__forgot" href="#forgot.html">Забыли пароль?</a>
+				</p>
+
+				<button class="enter-or-registration__enter" type="submit">Войти</button>
+
+				<p class="enter-or-registration__agree">
+					<input class="enter-or-registration__agree-checkbox visually-hidden" type="checkbox" name="agree-checkbox" id="agree-field">
+					<label class="enter-or-registration__agree-label" for="agree-field">Соглашаюсь с условиями <a class="enter-or-registration__agree-policy" href="#">Публичной оферты и Политикой конфиденциальности</a>
+					</label>
+				</p>
+			</form>
+		</div>
+	</section>
+
+	<!-- FORGOTTEN PASSWORD -->
+	<section class="lost">
+		<div class="lost__wrapper container">
+			<h2 class="lost__title">Забыли пароль?</h2>
+
+			<a class="lost__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="lost__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<p class="lost__text">Мы отправим инструкцию на ваш email</p>
+
+			<form class="lost__form" action="" method="post">
+				<div class="input-container">
+					<label class="lost__label" for="lost-email-field">Email</label>
+					<input class="lost__input" type="text" name="email" id="lost-email-field" placeholder="Введите email" required>
+					<span class="validity-icon"></span>
+				</div>
+
+				<button class="lost__reset" type="submit">Сбросить пароль</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- CHECK YOUR EMAIL -->
+	<section class="check">
+		<div class="check__wrapper container">
+			<h2 class="check__title">Проверьте свой email</h2>
+
+			<a class="check__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="check__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<p class="check__text">
+				Мы отправили ссылку на сброс пароля на ваш email <span class="check__email">troywell@gmail.com</span> 
+				<a class="check__link" href="#">Изменить</a>
+			</p>
+
+			<a class="lost__open-email" href="mailto:troywell@gmail.com">Открыть email</a>
+		</div>
+	</section>
+
+	<!-- NEW PASSWORD SECTION -->
+	<section class="new-password">
+		<div class="new-password__wrapper container">
+			<h2 class="new-password__title">Введите новый пароль</h2>
+
+			<a class="new-password__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="new-password__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<p class="new-password__text">Ваш новый пароль должен отличаться от ранее использовавшихся паролей.</p>
+
+			<form class="new-password__form" action="" method="post">
+				<div class="input-container">
+					<label class="new-password__label" for="new-password-field">Пароль</label>
+					<input class="new-password__input new-password__input--password" type="password" name="password" id="new-password-field" placeholder="••••••••" required>
+					<span class="validity-icon"></span>
+				</div>
+				<p class="new-password__help">Пароль должен содержать не менее 8 символов</p>
+
+				<div class="input-container">
+					<label class="new-password__label" for="once-again-password-field">Повторите пароль</label>
+					<input class="new-password__input new-password__input--password" type="password" name="password" id="once-again-password-field" placeholder="••••••••" required>
+					<span class="validity-icon"></span>
+				</div>
+
+					<button class="new-password__confirm" type="submit">Потвердить</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- NEW PASSWORD SECTION -->
+	<section class="reset">
+		<div class="reset__wrapper container">
+			<h2 class="reset__title">Пароль успешно сброшен</h2>
+
+			<a class="reset__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="reset__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<p class="reset__text">Нажмите кнопку ниже что бы войти в систему</p>
+
+			<button class="reset__proceed" type="submit">Потвердить</button>
+		</div>
+	</section>
+
+	<!-- authentication 2 ENTER OR REGISTRATION SECTION -->
+	<section class="authentication">
+		<div class="authentication__wrapper container">
+			<h1 class="authentication__title">Войдите или<br>зарегистрируйтесь</h1>
+			<button class="authentication__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<ul class="authentication__links-list">
+				<li class="authentication__links-item">
+					<a class="authentication__links-link" href="#">
+						<svg width="25" height="24">
+							<use xlink:href="#google"></use>
+						</svg>
+					Войти с помощью Google
+				</a>
+				</li>
+				<li class="authentication__links-item">
+					<a class="authentication__links-link" href="#">
+						<svg width="25" height="24">
+							<use xlink:href="#vk"></use>
+						</svg>
+						Войти с помощью VK
+				</a>
+				</li>
+				<li class="authentication__links-item">
+					<a class="authentication__links-link" href="#">
+						<svg width="24" height="24">
+							<use xlink:href="#ok"></use>
+						</svg>
+						Войти с помощью OK
+				</a>
+				</li>
+			</ul>
+
+			<ul class="authentication__variants-list">
+				<li class="authentication__variants-item">
+					<button class="authentication__variants-button" type="button">Вход</button>
+				</li>
+				<li class="authentication__variants-item authentication__variants-item--current">
+					<button class="authentication__variants-button" type="button">Регистрация</button>
+				</li>
+			</ul>
+
+			<form class="authentication__form" action="" method="post">
+				<fieldset class="authentication__set">
+					<legend class="visually-hidden">Форма входа</legend>
+					<div class="input-container">
+						<label class="authentication__label" for="first-name-field">Имя*</label>
+						<input class="authentication__input" type="text" name="first-name" id="first-name-field" placeholder="Введите имя" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="input-container">
+						<label class="authentication__label" for="last-name-field">Фамилия*</label>
+						<input class="authentication__input" type="text" name="last-name" id="last-name-field" placeholder="Введите фамилию" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="input-container">
+						<label class="authentication__label" for="email-field">Email*</label>
+						<input class="authentication__input" type="text" name="email" id="email-field" placeholder="Введите email" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="authentication__container">
+						<label class="authentication__label" for="registration-password-field">Пароль*</label>
+						<input class="authentication__input authentication__input--password" type="password" name="password" id="registration-password-field" placeholder="Введите пароль" required>
+
+						<button class="authentication__protected-button" type="button">
+							<svg width="20" height="20">
+								<use xlink:href="#protected"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="authentication__container">
+						<label class="authentication__label" for="registration-password-field-once-again">Повторите пароль*</label>
+						<input class="authentication__input authentication__input--password" type="password" name="password" id="registration-password-field-once-again" placeholder="Введите пароль" required>
+
+						<button class="authentication__protected-button" type="button">
+							<svg width="20" height="20">
+								<use xlink:href="#protected"></use>
+							</svg>
+						</button>
+					</div>
+				</fieldset>
+
+				<p class="authentication__agree">
+					<input class="authentication__agree-checkbox visually-hidden" type="checkbox" name="agree-checkbox" id="authentication-agree-field">
+					<label class="authentication__agree-label" for="authentication-agree-field">Соглашаюсь с условиями <a class="authentication__agree-policy" href="#">Публичной оферты и Политикой конфиденциальности</a>
+					</label>
+				</p>
+
+				<button class="authentication__register" type="submit">Зарегистрироваться</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- SMS CODE SECTION -->
+	<section class="sms-code">
+		<div class="sms-code__wrapper container">
+			<h2 class="sms-code__title">Введите код</h2>
+
+			<a class="sms-code__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="sms-code__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<p class="sms-code__text">Мы отправили код подтверждения на вашу электронную почту <span class="check__email">troywell@gmail.com</span> 
+				<a class="sms-code__link" href="#">Изменить</a>
+			</p>
+
+			<form class="sms-code__form" action="" method="post">
+				<div class="input-container">
+					<label class="sms-code__label visually-hidden" for="code-field">Sms code</label>
+					<input class="sms-code__input" type="text" name="code" id="code-field" placeholder="Введите код" required>
+					<span class="validity-icon"></span>
+				</div>
+
+				<p class="sms-code__forecast">Получить новый код можно<br>через <output class="sms-code__output">00:53</output></p>
+				<button class="sms-code__confirm" type="submit">Потвердить</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- REGISTRATION SECTION -->
+	<section class="registration">
+		<div class="registration__wrapper container">
+			<h2 class="registration__title">Зарегистрироваться</h2>
+
+			<a class="registration__back" href="#" aria-label="Вернуться назад">
+				<svg width="16" height="16">
+					<use xlink:href="#back-small"></use>
+				</svg>
+			</a>
+
+			<button class="registration__close" type="button">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+				<svg width="16" height="16">
+					<use xlink:href="#close-small"></use>
+				</svg>
+			</button>
+
+			<form class="registration__form" action="" method="post">
+				<fieldset class="registration__set">
+					<legend class="visually-hidden">Форма входа</legend>
+
+					<div class="input-container">
+						<label class="registration__label" for="first-name-field">Имя*</label>
+						<input class="registration__input" type="text" name="first-name" id="first-name-field" placeholder="Введите имя" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="input-container">
+						<label class="registration__label" for="last-name-field">Фамилия*</label>
+						<input class="registration__input" type="text" name="last-name" id="last-name-field" placeholder="Введите фамилию" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="input-container">
+						<label class="registration__label" for="email-field">Email*</label>
+						<input class="registration__input" type="text" name="email" id="email-field" placeholder="Введите email" required>
+						<span class="validity-icon"></span>
+					</div>
+
+					<div class="registration__container">
+						<label class="registration__label" for="registration-password-field">Пароль*</label>
+						<input class="registration__input registration__input--password" type="password" name="password" id="registration-password-field" placeholder="Введите пароль" required>
+
+						<button class="registration__protected-button" type="button">
+							<svg width="20" height="20">
+								<use xlink:href="#protected"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="registration__container">
+						<label class="registration__label" for="registration-password-field-once-again">Пароль*</label>
+						<input class="registration__input registration__input--password" type="password" name="password" id="registration-password-field-once-again" placeholder="Введите пароль" required>
+
+						<button class="registration__protected-button" type="button">
+							<svg width="20" height="20">
+								<use xlink:href="#protected"></use>
+							</svg>
+						</button>
+					</div>
+				</fieldset>
+
+				<p class="registration__agree">
+					<input class="registration__agree-checkbox visually-hidden" type="checkbox" name="agree-checkbox" id="registration-agree-field">
+					<label class="registration__agree-label" for="registration-agree-field">Соглашаюсь с условиями <a class="registration__agree-policy" href="#">Публичной оферты и Политикой конфиденциальности</a>
+					</label>
+				</p>
+
+				<button class="registration__register" type="submit">Зарегистрироваться</button>
+			</form>
+		</div>
+	</section>
+</body>
+</html>

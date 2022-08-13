@@ -1,0 +1,276 @@
+.reviews {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.reviews__title {
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.reviews__main {
+	border: 1px solid $grey200;
+	border-radius: 16px;
+	padding: 24px 16px;
+	margin-bottom: 32px;
+}
+
+.reviews__rating {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+
+	svg {
+		margin-right: 4px;
+
+		&:nth-last-of-type(1) {
+			margin-right: 0;
+		}
+	}
+}
+
+.reviews__mark {
+	@include textXlMedium;
+	margin: 0;
+	margin-left: 16px;
+}
+
+.reviews__statistics {
+	@include textSmallMedium;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.reviews__list {
+	@include reset-list;
+}
+
+.reviews__item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+
+	&:first-child {
+		.reviews__item-bar {
+			width: 57%;
+		}
+	}
+
+	&:nth-child(2) {
+		.reviews__item-bar {
+			width: 48%;
+		}
+	}
+
+	&:last-child {
+		.reviews__item-bar {
+			width: 38%;
+		}
+	}
+}
+
+.reviews__item-title {
+	@include textSmallMedium;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 12px;
+}
+
+.reviews__item-range {
+	width: 100%;
+	height: 8px;
+	background-color: $grey200;
+	border-radius: 100px;
+
+	position: relative;
+}
+
+.reviews__item-bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 8px;
+	background-color: $primary500;
+	border-radius: 100px;
+}
+
+.reviews__feedback {
+	@include blueButton;
+	@include textSmallMedium;
+	color: $primary500;
+	border: 1px solid $primary500;
+	border-radius: 100px;
+	background-color: $transparent;
+	padding: 9px;
+}
+
+.reviews__new {
+	&:hover {
+		background-color: $primary600;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $primary400;
+	}
+}
+
+.reviews__containter {
+	position: relative;
+	z-index: 2;
+}
+
+.reviews__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include textMediumRegular;
+	background-color: $white;
+	width: 100%;
+	color: $grey800;
+	padding: 7px 21px 7px 16px;
+	margin-bottom: 24px;
+	border: 1px solid $grey200;
+	border-radius: 100px;
+
+	&:hover {
+		background-color: $grey50;
+		border: 1px solid $grey300;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+	}
+}
+
+.reviews__container-list {
+	@include reset-list;
+	width: 100%;
+	background-color: $white;
+	border: 1px solid $grey200;
+	position: absolute;
+	padding-top: 30px;
+	top: 17px;
+	left: 0;
+	z-index: -1;
+	display: none;
+
+	// display: block;
+}
+
+.reviews__container-item {
+	@include textMediumMedium;
+	cursor: pointer;
+	color: $grey800;
+	min-width: 320px;
+	padding: 12px 16px;
+
+	&--active {
+		padding-right: 48px;
+		background-color: $grey50;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 18px;
+			height: 13px;
+			background-image: url('../img/icons/blue-tick.svg');
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 19px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.reviews {
+		padding-top: 16px;
+		padding-bottom: 80px;
+	}
+
+	.reviews__title {
+		@include textXlSemibold;
+	}
+
+	.reviews__main {
+		padding: 32px;
+		position: relative;
+	}
+
+	.reviews__rating {
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	.reviews__feedback {
+		width: 24.6%;
+		position: absolute;
+		top: 32px;
+		right: 32px;
+	}
+
+	.reviews__statistics {
+		@include textMediumMedium;
+	}
+
+	.reviews__item {
+		padding-right: 49px;
+	}
+
+	.reviews__content {
+		width: 49.32%;
+		margin-bottom: 32px;
+		padding: 11px 16px;
+	}
+
+	.reviews__container-list {
+		width: 49.32%;
+		@include reset-list;
+		top: 25px;
+		display: none;
+		padding-top: 30px;
+	}
+
+	.reviews__container-item {
+		min-width: auto;
+	}
+}
+
+@media (min-width: 1440px) {
+	.reviews {
+		padding: 0;
+	}
+
+	.reviews__title {
+		@include titleExtraSmallSemibold;
+	}
+
+	.reviews__feedback {
+		width: 143px;
+	}
+
+	.reviews__list {
+		padding-right: 276px;
+	}
+
+	.reviews__item {
+		padding-right: 0;
+	}
+
+	.reviews__filter {
+		margin-bottom: 32px;
+	}
+
+	.reviews__content {
+		width: 320px;
+		margin-bottom: 0;
+	}
+
+	.reviews__container-list {
+		width: 320px;
+	}
+}

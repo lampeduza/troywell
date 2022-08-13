@@ -1,0 +1,39 @@
+.reset__wrapper {
+	padding: 24px 16px;
+	position: relative;
+}
+
+.reset__title {
+	@include textLargeMedium;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.reset__back {
+	@include smallButtonBack;
+}
+
+.reset__close {
+	@include smallButtonClose;
+}
+
+.reset__text {
+	@include textSmallRegular;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.reset__proceed {
+	@include blueButton;
+	border: none;
+	margin-top: 648px;
+}
+
+@media (min-width: 480px) {
+	.reset__proceed {
+		margin: 0;
+	}
+}

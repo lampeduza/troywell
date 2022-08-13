@@ -1,0 +1,29 @@
+.about-shopping {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.about-shopping__title {
+	@include textXlSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.about-shopping__text {
+	@include textMediumRegular;
+	color: $grey500;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.about-shopping__link {
+	@include textSmallMedium;
+	color: $primary500;
+}
+
+@media (min-width: 1024px) {
+	.about-shopping {
+		display: none;
+	}
+}

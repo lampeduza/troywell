@@ -1,0 +1,454 @@
+.account {
+	background-color: $grey50;
+	padding: 24px 0;
+
+	&--favorite {
+		padding: 24px 0 40px 0;
+	}
+
+	&--income {
+		padding: 24px 0 40px 0;
+	}
+}
+
+.account__navigation {
+	margin-bottom: 24px;
+}
+
+.account__main-data {
+	margin-bottom: 4px;
+}
+
+.account__main-data,
+.account__secondary-data {
+	background-color: $white;
+	border-radius: 12px;
+	padding: 16px;
+	box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 4px;
+
+	&::before {
+		content: '';
+		height: 1px;
+		width: 100vw;
+		background-color: $grey200;
+		position: absolute;
+		bottom: 72px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.account__secondary-data {
+	padding-top: 24px;
+
+	.account__area-fields-title {
+		@include textXlSemibold;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.account__area-fields-input {
+		color: $grey500;
+
+		&::placeholder {
+			color: $grey500;
+		}
+	}
+}
+
+.account__navigation-list {
+	@include reset-list;
+	display: none;
+}
+
+.account__value {
+	@include textMediumMedium;
+	color: $grey900;
+	background-color: $white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 18px 10px 14px;
+	border: 1px solid $grey300;
+	border-radius: 8px;
+}
+
+.account__title {
+	display: none;
+}
+
+.account__delete {
+	display: none;
+}
+
+.account__area-edit-area {
+	position: relative;
+	width: max-content;
+	margin-bottom: 24px;
+}
+
+.account__area-image {
+	border-radius: 50%;
+}
+
+.account__area-edit {
+	padding: 0;
+	border: 0;
+	background-color: $transparent;
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+}
+
+.account__area-controls-list {
+	@include reset-list;
+	display: flex;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.account__area-controls-button {
+	@include textSmallMedium;
+	border-radius: 100px;
+	border: 1px solid $grey300;
+	background-color: $white;
+	padding: 5px 11px;
+
+	&--remove {
+		background-color: $error600;
+		border-color: $error600;
+		color: $white;
+	}
+}
+
+.account__area-fields {
+	border: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+
+	&--password {
+		margin-bottom: 32px;
+	}
+}
+
+.account__area-fields-container {
+	.account__area-fields-input {
+		width: 100%;
+	}
+
+	span {
+		display: none;
+	}
+}
+
+.account__area-fields-label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.account__area-fields-input {
+	@include textMediumRegular;
+	color: $grey900;
+	margin-bottom: 24px;
+	border: 1px solid $grey300;
+	border-radius: 8px;
+	padding: 11px 13px;
+
+	&::placeholder {
+		color: $grey900;
+	}
+}
+
+.account__area-gender-container {
+	display: flex;
+	gap: 24px;
+	padding-bottom: 32px;
+
+	.account__area-fields-input {
+		&:checked {
+			+ .account__area-gender {
+				&::before {
+					border-color: $primary500;
+				}
+
+				&::after {
+					width: 6px;
+					height: 6px;
+					background-color: $primary500;
+					left: 5px;
+				}
+			}
+		}
+	}
+}
+
+.account__area-gender {
+	margin: 0;
+	padding-left: 24px;
+	display: flex;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&::before {
+		width: 16px;
+		height: 16px;
+		border: 1px solid $grey300;
+		left: 0;
+	}
+}
+
+.account__area-buttons {
+	@include reset-list;
+	display: flex;
+	gap: 12px;
+}
+
+.account__area-item {
+	width: calc(100% / 2 - 6px);
+}
+
+.account__area-button {
+	@include textSmallMedium;
+	background-color: $white;
+	color: $grey700;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid $grey300;
+	border-radius: 100px;
+
+	&--save {
+		background-color: $primary500;
+		color: $white;
+		border-color: $primary500;
+	}
+}
+
+@media (min-width: 1024px) {
+	.account {
+		background-color: white;
+
+		&--profile {
+			padding: 0;
+		}
+
+		&--favorite {
+			padding: 0;
+			
+			.account__right {
+				padding-bottom: 64px;
+			}
+		}
+
+		&--income {
+			padding: 0;
+
+			.right {
+				padding: 48px 40px 90px 96px;
+			}
+		}
+	}
+
+	.account__wrapper {
+		display: flex;
+		padding: 0;
+	}
+
+	.account__value {
+		display: none;
+	}
+
+	.account__navigation {
+		margin: 0;
+	}
+
+	.account__navigation-list {
+		display: block;
+	}
+
+	.account__navigation-item {
+
+		&--active {
+			.account__navigation-link {
+				background-color: $grey50;
+			}
+		}
+	}
+
+	.account__navigation-link {
+		@include textMediumMedium;
+		color: $grey500;
+		padding: 12px;
+		border-radius: 6px;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			background-color: $grey50;
+		}
+
+		picture {
+			width: auto;
+			margin-right: 12px;
+		}
+
+		svg {
+			margin-right: 12px;
+		}
+	}
+
+	.account__area {
+		position: relative;
+	}
+
+	.account__title {
+		@include titleSmallSemibold;
+		color: $grey700;
+		display: block;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.account__delete {
+		@include textSmallMedium;
+		color: $grey700;
+		background-color: #ffffff;
+		border: 1px solid $grey300;
+		border-radius: 100px;
+		padding: 6px 12px;
+		display: block;
+		position: absolute;
+		top: 3px;
+		right: 0;
+	}
+
+	.account__main-data {
+		padding: 32px 24px 24px 32px;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	.account__area-edit-area {
+		margin-bottom: 16px;
+	}
+
+	.account__area-controls-list {
+		margin-bottom: 32px;
+	}
+
+	.account__area-fields {
+		width: 368px;
+	}
+
+	.account__area-fields-container {
+		margin-bottom: 24px;
+
+		input {
+			margin-bottom: 6px;
+		}
+
+		span {
+			@include textSmallRegular;
+			color: $grey500;
+			display: block;
+			padding-right: 50px;
+		}
+	}
+
+	.account__area-fields-label {
+		&--gender {
+			margin-bottom: 8px;
+		}
+	}
+
+	.account__area-fields-input {
+		color: $grey800;
+
+		&--disabled {
+			background-color: $grey50;
+			color: $grey500;
+
+			&::placeholder {
+				color: $grey500;
+			}
+		}
+	}
+
+	.account__main-data {
+		&::before {
+			bottom: 90px;
+		}
+	}
+
+	.account__area-buttons {
+		justify-content: flex-end;
+		padding-top: 24px;
+	}
+
+	.account__area-item {
+		width: auto;
+	}
+
+	.account__area-button {
+		padding: 10px 16px;
+	}
+
+	.account__secondary-data {
+		padding: 0;
+
+		.account__area-form {
+			display: flex;
+			flex-direction: column;
+			padding-top: 32px;
+		}
+
+		.account__area-fields-title {
+			@include titleExtraSmallSemibold;
+			margin-bottom: 32px;
+		}
+
+		.account__area-fields {
+			&--password {
+				padding: 0 32px 8px 32px;
+				margin-bottom: 0;
+			}
+		}
+
+		.account__area-buttons {
+			padding: 24px;
+		}
+
+		&::before {
+			bottom: 90px;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.account {
+
+		&--income {
+			.right {
+				padding: 48px 108px 81px 104px;
+			}
+		}
+		.container {
+			max-width: 100%;
+		}
+	}
+}

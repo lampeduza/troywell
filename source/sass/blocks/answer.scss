@@ -1,0 +1,129 @@
+.answer__list {
+	@include reset-list;
+}
+
+.answer__item {
+	margin-bottom: 24px;
+
+	&:last-child {
+		margin-bottom: 32px;
+	}
+
+	&:not(:last-child) {
+		.answer__main {
+			position: relative;
+
+			&::before {
+				content: '';
+				width: 1px;
+				height: 100%;
+				background-color: #c4c4c4;
+				position: absolute;
+				top: 0;
+				left: 24px;
+			}
+		}
+	}
+}
+
+.answer__top {
+	display: flex;
+	margin-bottom: 16px;
+
+	.answer__picture {
+		display: flex;
+		width: max-content;
+	}
+}
+
+.answer__content {
+	display: flex;
+	flex-direction: column;
+	margin-left: 16px;
+}
+
+.answer__to {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+	color: $primary500;
+}
+
+.answer__date {
+	@include textSmallRegular;
+	color: $grey500;
+	margin-left: auto;
+}
+
+.answer__initials {
+	color: $grey700;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: $medium;
+	margin-bottom: 4px;
+}
+
+.answer__quote {
+	@include textSmallRegular;
+	color: $grey600;
+	margin: 0;
+	margin-left: 64px;
+	margin-bottom: 16px;
+}
+
+.answer__reply-bar {
+	margin-left: 64px;
+}
+
+@media (min-width: 1024px) {
+	.answer {
+		padding-top: 32px;
+		padding-left: 40px;
+	}
+
+	.answer__image {
+		width: 56px;
+		height: 56px;
+	}
+
+	.answer__item {
+		margin-bottom: 12px;
+
+		&:not(:last-child) {
+			padding-bottom: 24px;
+		}
+	}
+
+	.answer__initials {
+		@include textMediumSemibold;
+	}
+
+	.answer__to {
+		@include textMediumMedium;
+	}
+
+	.answer__date {
+		@include textMediumRegular;
+	}
+
+	.answer__quote {
+		padding: 24px 0;
+		margin-left: 72px;
+		margin-bottom: 0;
+	}
+
+	.answer__reply-bar {
+		position: absolute;
+		margin: 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.answer {
+		padding-left: 72px;
+	}
+
+	.answer__reply-bar {
+		position: static;
+	}
+}

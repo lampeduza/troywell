@@ -1,0 +1,156 @@
+.payout__title {
+	@include textXlSemibold;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.payout__table {
+	display: flex;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid $grey100;
+	border-radius: 8px 8px 0 0;
+	background-color: #ffffff;
+
+	tbody {
+		width: 100%;
+	}
+}
+
+.payout__row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	
+	&:not(:last-of-type) {
+		border-bottom: 1px solid $grey100;
+	}
+}
+
+.payout__cell {
+	@include textSmallMedium;
+	color: $grey500;
+	width: 50%;
+	padding: 24px;
+
+	text-align: left;
+
+	&:nth-of-type(3n) {
+		text-align: right;
+	}
+
+	&--title {
+		@include textExtraSmallMedium;
+		padding: 13px 13px 13px 24px;
+
+		&:nth-of-type(3) {
+			padding: 13px 24px 13px 13px;
+		}
+	}
+
+	&--sum {
+		color: $success500;
+	}
+
+	&--tablet {
+		display: none;
+	}
+}
+
+.payout__pagination {
+	background-color: #ffffff;
+	padding: 11px 0 16px 0;
+	border-left: 1px solid $grey100;
+	border-right: 1px solid $grey100;
+	border-bottom: 1px solid $grey100;
+	border-radius: 0 0 8px 8px;
+
+	.catalog__pagination-item {
+		margin-right: 6px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--tablet {
+			display: none;
+		}
+	}
+
+	.catalog__pagination-link {
+		font-weight: 500;
+	}
+}
+
+@media (min-width: 1024px) {
+	.payout__title {
+		@include titleExtraSmallSemibold;
+		color: $grey700;
+	}
+
+	.payout__cell {
+		@include textSmallRegular;
+
+		&--sum {
+			color: $grey500;
+		}
+
+		&--tablet {
+			display: block;
+		}
+
+		&:first-child {
+			width: 36.3%;
+		}
+
+		&:nth-child(2) {
+			width: 45.89%;
+		}
+
+		&:last-child {
+			width: 17.808%;
+			text-align: left;
+			padding-left: 24px;
+		}
+	}
+
+	.payout__pagination {
+		.catalog__pagination-item {
+			&--tablet {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.payout__title {
+		color: $grey800;
+	}
+
+	.payout__cell {
+		font-weight: 500;
+		padding: 26px 24px;
+
+		&--title {
+			@include textExtraSmallMedium;
+			padding: 13px 24px;
+		}
+
+		&--sum {
+			color: $success500;
+		}
+
+		&:first-child {
+			width: 26.23%;
+		}
+
+		&:nth-child(2) {
+			width: 50%;
+		}
+
+		&:last-child {
+			width: 23.76%;
+		}
+	}
+}

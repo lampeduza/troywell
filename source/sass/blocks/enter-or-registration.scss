@@ -1,0 +1,201 @@
+.enter-or-registration__wrapper {
+	padding: 24px 16px 16px 16px;
+
+	position: relative;
+}
+
+.enter-or-registration__title {
+	@include titleExtraSmallBold;
+	margin: 0 0 24px 0;
+}
+
+.enter-or-registration__close {
+	@include smallButtonClose;
+	top: 30px;
+}
+
+.enter-or-registration__links-list {
+	@include reset-list;
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+	border-bottom: 1px solid $grey200;
+}
+
+.enter-or-registration__links-item {
+	margin-bottom: 8px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.enter-or-registration__links-link {
+	@include longButton;
+
+	&:hover {
+		background-color: $grey50;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+		outline: none;
+	}
+
+	svg {
+		margin-right: 8px;
+	}
+}
+
+.enter-or-registration__variants-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 24px;
+}
+
+.enter-or-registration__variants-item {
+	margin-right: 20px;
+
+	&--current {
+		.enter-or-registration__variants-button {
+			color: $grey800;
+		}
+	}
+}
+
+.enter-or-registration__variants-button {
+	@include textSmallMedium;
+	padding: 0;
+	color: $grey500;
+	background-color: $transparent;
+	border: 0;
+}
+
+.enter-or-registration__container {
+	position: relative;
+}
+
+.enter-or-registration__protected-button {
+	@include protectedButton;
+}
+
+.enter-or-registration__set {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.enter-or-registration__label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.input-container {
+	position: relative;
+
+	input {
+		&:invalid {
+			+ .validity-icon::before {
+				content: '';
+  			width: 20px;
+  			height: 20px;
+  			background-image: url('../img/icons/status.svg');
+  			position: absolute;
+  			top: 40px;
+  			right: 15px;
+			}
+		}
+	}
+}
+
+.enter-or-registration__input {
+	@include input;
+	@include inputState;
+	margin-bottom: 24px;
+
+	&--password {
+		padding-right: 65px;
+	}
+}
+
+.enter-or-registration__remember {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	margin-bottom: 87px;
+}
+
+.enter-or-registration__remember-label {
+	@include textSmallMedium;
+	color: $grey700;
+	padding-left: 24px;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		@include checkboxGrey;
+		top: 2px;
+	}
+}
+
+.enter-or-registration__remember-checkbox {
+	&:checked {
+		~ .enter-or-registration__remember-label {
+			&::after {
+				@include tickGrey;
+				top: 5px;
+			}
+		}
+	}
+}
+
+.enter-or-registration__forgot {
+	@include textSmallMedium;
+	color: $grey800;
+	margin-left: auto;
+}
+
+.enter-or-registration__enter {
+	@include blueButton;
+	margin-bottom: 24px;
+	border: none;
+}
+
+.enter-or-registration__agree {
+	@include textSmallRegular;
+	margin: 0;
+	margin-bottom: 307px;
+}
+
+.enter-or-registration__agree-label {
+	padding-left: 24px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		@include checkboxBlue;
+	}
+}
+
+.enter-or-registration__agree-checkbox {
+	&:checked {
+		~ .enter-or-registration__agree-label {
+			&::after {
+				@include tickBlue;
+			}
+		}
+	}
+}
+
+.enter-or-registration__agree-policy {
+	color: #3A70F7;
+}
+
+@media (min-width: 480px) {
+	.enter-or-registration__agree {
+		padding-right: 90px;
+	}
+}

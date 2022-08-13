@@ -1,0 +1,295 @@
+.get__wrapper {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	overflow: hidden;
+}
+
+.get__title {
+	@include titleExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.get__navigation-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+	
+	position: relative;
+	width: 100vw;
+	left: 16px;
+	transform: translateX(-16px);
+}
+
+.get__navigation-item {
+	@include textExtraSmallMedium;
+	color: $grey500;
+	flex-shrink: 0;
+	padding: 8px 12px;
+	border-radius: 100px;
+	cursor: pointer;
+
+	&--current {
+		background-color: $grey700;
+		color: $white;
+		box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+		cursor: auto;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $grey700;
+		color: $white;
+		cursor: auto;
+	}
+}
+
+.get__card-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.get__card-item {
+	min-height: 196px;
+	flex-shrink: 0;
+	background-color: $white;
+	border: 1px solid $grey200;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 12px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.get__card-link {
+	padding: 12px;
+}
+
+.get__card-picture {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.get__shop {
+	background-color: $grey100;
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 16px;
+}
+
+.get__shop-title {
+	@include textSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.get__coupons {
+	@include textSmallMedium;
+	color: $grey600;
+	margin: 0;
+}
+
+.get__card-cashback {
+	@include textExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	padding-left: 32px;
+	position: relative;
+
+	&::before {
+		@include mobileDiamond;
+	}
+}
+
+.get__controls {
+	display: none;
+}
+
+.get__expand {
+	@include expandButton;
+
+	&:hover {
+		background-color: $grey50;
+		border: 1px solid $grey300;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+	}
+}
+
+@media (min-width: 1024px) {
+	.get__wrapper {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		position: relative;
+	}
+
+	.get__title {
+		@include titleSmallSemibold;
+		margin-bottom: 32px;
+	}
+
+	.get__card-list {
+		margin-bottom: 0;
+	}
+
+	.get__card-item {
+		width: 184px;
+		margin-right: 16px;
+		border-radius: 16px;
+	}
+
+	.get__card-link {
+		padding: 16px;
+	}
+
+	.get__navigation-list {
+		left: auto;
+		transform: translateX(0);
+		position: static;
+		width: max-content;
+		margin-bottom: 24px;
+	}
+
+	.get__navigation-item {
+		@include textMediumMedium;
+		margin-right: 8px;
+	}
+
+	.get__coupons {
+		@include textExtraSmallMedium;
+	}
+
+	.get__card-cashback {
+		padding-left: 32px;
+
+		&::before {
+			@include bigMobileDiamond;
+		}
+	}
+
+	.fresh__promocode {
+		display: flex;
+		align-items: center;
+	}
+
+	.fresh__promocode-title {
+		margin-bottom: 0;
+		margin-right: 8px;
+	}
+
+	.get__expand {
+		@include textLargeMedium;
+		color: $primary500;
+		padding: 0;
+		width: max-content;
+		border: none;
+		position: absolute;
+		top: 69px;
+		right: 40px;
+
+		&:hover {
+			background-color: $transparent;
+			border: none;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.get__wrapper {
+		padding-top: 80px;
+		padding-bottom: 40px;
+		position: relative;
+	}
+
+	.get__title {
+		@include titleMediumSemibold;
+		margin-bottom: 32px;
+	}
+
+	.get__navigation-list {
+		// gap: 8px;
+		margin-bottom: 32px;
+	}
+
+	.get__card-list {
+		flex-wrap: wrap;
+		// gap: 24px;
+	}
+
+	.get__card-item {
+		margin: 0;
+		margin-right: 24px;
+		width: calc(100% / 6 - 20px);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.get__card-link {
+		padding: 24px;
+	}
+
+	.get__card-picture {
+		margin-bottom: 24px;
+	}
+
+	.get__shop {
+		margin-bottom: 24px;
+		padding: 12px;
+	}
+
+	.get__controls {
+		display: block;
+		@include reset-list;
+		width: 1224px;
+		height: 44px;
+		position: absolute;
+		bottom: 135px;
+	}
+
+	.get__control {
+		position: absolute;
+		
+		&:first-child {
+			top: 0;
+			left: -22px;
+		}
+
+		&:last-child {
+			top: 0;
+			right: -22px;
+		}
+	}
+
+	.get__control-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 1px solid $grey100;
+		background-color: $white;
+	}
+
+	.get__expand {
+		top: 88px;
+		right: 108px;
+	}
+}

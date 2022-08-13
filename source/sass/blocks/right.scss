@@ -1,0 +1,15 @@
+@media (min-width: 1024px) {
+	.right {
+		background-color: $grey50;
+		width: calc(100% - 29.7%);
+		padding: 48px 40px 80px 96px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.right {
+		background-color: $grey50;
+		width: calc(100% - 29.9%);
+		padding: 48px 108px 48px 104px;
+	}
+}

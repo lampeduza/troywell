@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $primary-font;
+  font-weight: $regular;
+  background-color: $white;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 375px;
+}
+
+a {
+  text-decoration: none;
+}
+
+picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+@media (min-width: 480px) {
+  .body-registration {
+    background-color: $grey50;
+
+    section {
+      display: flex;
+      margin-left: auto;
+      background-color: $white;
+
+      width: 480px;
+      height: 1040px;
+
+      .container {
+        width: 100%;
+        max-width: 480px;
+        margin: 0;
+        padding: 32px 32px 0 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.international__wrapper {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.international__title {
+	@include titleExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.international__list {
+	@include reset-list;
+	display: flex;
+}
+
+.international__item {
+	border: 1px solid $grey200;
+	border-radius: 16px;
+	flex-shrink: 0;
+	width: 160px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	padding: 16px 12px 12px 12px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.international__picture {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.international__item-title {
+	@include textSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.international__cashback {
+	@include textExtraSmallSemibold;
+	color: $grey800;
+	display: flex;
+	align-items: center;
+	padding-left: 32px;
+	margin: 0;
+	position: relative;
+	min-height: 24px;
+
+	&::before {
+		@include bigMobileDiamond;
+	}
+}
+
+.international__controls {
+	display: none;
+}
+
+.international__expand {
+	@include expandButton;
+
+	&:hover {
+		background-color: $grey50;
+		border: 1px solid $grey300;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+	}
+}
+
+@media (min-width: 1024px) {
+	.international__wrapper {
+		padding-top: 64px;
+		padding-bottom: 32px;
+		position: relative;
+	}
+
+	.international__title {
+		@include titleSmallSemibold;
+		color: $grey800;
+		margin-bottom: 24px;
+	}
+
+	.international__item {
+		margin-bottom: 0;
+		padding: 16px 32px 16px 16px;
+		width: 184px;
+
+	}
+
+	.international__expand {
+		@include textLargeMedium;
+		color: $primary500;
+		padding: 0;
+		width: max-content;
+		border: none;
+		position: absolute;
+		top: 69px;
+		right: 40px;
+
+		&:hover {
+			background-color: $transparent;
+			border: none;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.international__wrapper {
+		padding-top: 80px;
+	}
+
+	.international__title {
+		@include titleMediumSemibold;
+		margin: 0;
+		margin-bottom: 32px;
+	}
+
+	.international__list {
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.international__item {
+		margin: 0;
+		padding: 24px;
+	}
+
+	.international__controls {
+		display: block;
+		@include reset-list;
+		width: 1224px;
+		height: 44px;
+		position: absolute;
+		bottom: 90px;
+	}
+
+	.international__control {
+		position: absolute;
+		
+		&:first-child {
+			top: 0;
+			left: -22px;
+		}
+
+		&:last-child {
+			top: 0;
+			right: -22px;
+		}
+	}
+
+	.international__control-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 1px solid $grey100;
+		background-color: $white;
+	}
+
+	.international__expand {
+		top: 88px;
+		right: 108px;
+	}
+}

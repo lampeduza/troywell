@@ -1,0 +1,153 @@
+.categories__wrapper {
+	padding-top: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding-right: 0;
+}
+
+.categories__title {
+	@include titleExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 24px;
+	align-self: flex-start;
+}
+
+.categories__list {
+	@include reset-list;
+	display: flex;
+	flex-wrap: wrap;
+	// gap: 24px 8px;
+}
+
+.categories__item {
+	width: 109px;
+
+	margin-bottom: 24px;
+	margin-right: 8px;
+
+	&--additional-tablet {
+		display: none;
+	}
+}
+
+.categories__link {
+	display: block;
+}
+
+.categories__picture {
+	display: flex;
+	margin-bottom: 12px;
+}
+
+.categories__subtitle {
+	@include textExtraSmallRegular;
+	color: $grey700;
+	text-align: center;
+	margin: 0;
+}
+
+.categories__expand {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.categories__wrapper {
+		padding-top: 32px;
+		padding-bottom: 32px;
+		align-items: normal;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.categories__title {
+		@include titleSmallSemibold;
+		margin-bottom: 32px;
+	}
+
+	.categories__list {
+		// gap: 16px;
+		flex-wrap: nowrap;
+		margin: 0;
+		overflow: hidden;
+	}
+
+	.categories__item {
+		width: 112px;
+		margin-right: 16px;
+		flex-shrink: 0;
+
+		&--additional-tablet {
+			display: block;
+		}
+
+		&--hidden-element {
+			display: none;
+		}
+	}
+
+	.categories__picture {
+		margin-bottom: 16px;
+	}
+
+	.categories__image {
+		width: 112px;
+		height: 112px;
+	}
+
+	.categories__subtitle {
+		@include textSmallMedium;
+	}
+
+	.categories__expand {
+		@include textLargeMedium;
+		color: $primary500;
+		display: inline-block;
+		position: absolute;
+		top: 37px;
+		right: 40px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.categories__wrapper {
+
+	}
+	.categories__title {
+		@include titleMediumSemibold;
+		margin-bottom: 32px;
+	}
+
+	.categories__list {
+		margin: 0;
+		// gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.categories__item {
+		width: 184px;
+
+		margin-right: 24px;
+
+		&:nth-child(8) {
+			margin-right: 0;
+		}
+
+		&:nth-child(6),
+		&:nth-child(7) {
+			display: none;
+		}
+	}
+
+	.categories__image {
+		width: 184px;
+		height: 184px;
+	}
+
+	.categories__expand {
+		top: 48px;
+		right: 108px;
+	}
+}

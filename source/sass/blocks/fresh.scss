@@ -1,0 +1,466 @@
+.fresh {
+	background-color: $grey50;
+
+	&--expire {
+		background-color: $transparent;
+
+		.fresh__controls {
+			display: none;
+		}
+	}
+}
+
+.fresh__wrapper {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.fresh__title {
+	@include titleExtraSmallSemibold;
+	color: $grey700;
+	margin: 0;
+	margin-bottom: 16px;
+
+	&--tablet {
+		display: none;
+	}
+}
+
+.fresh__navigation-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+	
+	position: relative;
+	width: 100vw;
+	left: 16px;
+	transform: translateX(-16px);
+
+	&--expire {
+		margin-bottom: 29px;
+	}
+}
+
+.fresh__navigation-item {
+	@include textExtraSmallMedium;
+	color: $grey500;
+	flex-shrink: 0;
+	padding: 8px 12px;
+	border-radius: 100px;
+	cursor: pointer;
+
+	&--current {
+		background-color: $grey700;
+		color: $white;
+		box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+		cursor: auto;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $grey700;
+		color: $white;
+		cursor: auto;
+	}
+}
+
+.fresh__card-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.fresh__card-item {
+	width: 160px;
+	min-height: 220px;
+	flex-shrink: 0;
+	background-color: $white;
+	border: 1px solid $grey200;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 12px;
+	padding: 12px;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	&--expire {
+		position: relative;
+
+		.fresh__card-expire {
+			@include textExtraSmallMedium;
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: -13px;
+			left: 12px;
+			color: $grey700;
+			background-color: $warning200;
+			padding: 4px 8px 4px 4px;
+			border-radius: 100px;
+
+			&--tablet {
+				display: none;
+			}
+		}
+
+		.fresh__card-expire-text {
+			margin: 0;
+			margin-left: 8px;
+		}
+	}
+}
+
+.fresh__card-picture {
+	margin-bottom: 16px;
+}
+
+.fresh__wish {
+	background-color: $grey100;
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 16px;
+}
+
+.fresh__wish-title {
+	@include textSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 8px;
+	width: 126px;
+}
+
+.fresh__wish-text {
+	@include textExtraSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	padding-left: 28px;
+	position: relative;
+
+	&::before {
+		@include mobileDiamond;
+	}
+}
+
+.fresh__card-title {
+	@include textMediumSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.fresh__card-capital {
+	text-transform: uppercase;
+}
+
+.fresh__promocode-title {
+	@include textExtraSmallMedium;
+	color: $grey600;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.fresh__promocode-button {
+	@include smallButtonBlueWithoutIcon;
+	@include textExtraSmallMedium;
+	width: 104px;
+	height: 32px;
+	padding: 7px 23px;
+	border: none;
+	border-radius: 100px;
+
+	position: relative;
+	z-index: 0;
+
+	&:hover {
+		border: none;
+		background-color: $primary600;
+	}
+
+	&:focus,
+	&:active {
+		border: none;
+		background-color: $primary400;
+	}
+}
+
+.fresh__promocode-open {
+	width: 100%;
+	padding: 7px 23px;
+	border: 1px solid $primary500;
+	border-radius: 100px;
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 0;
+  background-color: $primary500;
+
+  &:hover {
+  	background-color: $primary600;
+  }
+
+  &:focus,
+  &:active {
+  	background-color: $primary400;
+  }
+}
+
+.fresh__promocode-code {
+	@include textExtraSmallMedium;
+	color: $grey700;
+	position: absolute;
+	left: 0;
+	top: -1px;
+	background-color: #e9effe;
+	width: 126px;
+	padding: 7px 8px;
+	border: 1px dashed $primary500;
+	border-radius: 100px;
+	text-align: right;
+	z-index: -1;
+}
+
+.fresh__expand {
+	@include expandButton;
+	background-color: $white;
+
+	&:hover {
+		background-color: $grey50;
+		border: 1px solid $grey300;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+	}
+}
+
+@media (min-width: 1024px) {
+	.fresh {
+		&--expire {
+			.fresh__wrapper {
+				padding-top: 32px;
+				padding-bottom: 32px;
+			}
+
+			.fresh__expand {
+				background-color: $white;
+			}
+		}
+	}
+
+	.fresh__wrapper {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		position: relative;
+	}
+
+	.fresh__title {
+		@include titleSmallSemibold;
+		margin-bottom: 24px;
+
+		&--mobile {
+			display: none;
+		}
+
+		&--tablet {
+			display: block;
+		}
+	}
+
+	.fresh__navigation-list {
+		left: auto;
+		transform: translateX(0);
+		position: static;
+		width: max-content;
+		margin-bottom: 37px;
+	}
+
+	.fresh__navigation-item {
+		@include textMediumMedium;
+		margin-right: 8px;
+	}
+
+	.fresh__card-list {
+		margin-bottom: 0;
+	}
+
+	.fresh__card-item {
+		width: 264px;
+		margin-right: 16px;
+		padding: 16px;
+		border-radius: 16px;
+
+		&--expire {
+			padding: 24px 16px 16px 16px;
+
+			.fresh__card-expire {
+				left: 16px;
+
+				&--mobile {
+					display: none;
+				}
+
+				&--tablet {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	.fresh__card-image {
+		width: 168px;
+		height: 66px;
+	}
+
+	.fresh__wish-text {
+		padding-left: 32px;
+
+		&::before {
+			@include bigMobileDiamond;
+		}
+	}
+
+	.fresh__promocode {
+		display: flex;
+		align-items: center;
+	}
+
+	.fresh__promocode-title {
+		margin-bottom: 0;
+		margin-right: 8px;
+	}
+
+	.fresh__expand {
+		@include textLargeMedium;
+		color: $primary500;
+		padding: 0;
+		width: max-content;
+		border: none;
+		position: absolute;
+		background-color: #F9FAFB;
+		top: 69px;
+		right: 40px;
+
+		&:hover {
+			background-color: none;
+			border: none;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.fresh {
+		&--expire {
+			.fresh__wrapper {
+				position: relative;
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+
+			.fresh__navigation-list {
+				display: flex;
+				margin-bottom: 32px;
+				// gap: 8px;	
+			}
+
+			.fresh__card-item {
+				width: calc(100% / 4 - 18px);
+
+				&:nth-child(3n) {
+					margin-right: 24px;
+				}
+
+				&:nth-child(4n) {
+					margin-right: 0;
+				}
+
+				&:last-child,
+				&:nth-child(5) {
+					display: none;
+				}
+			}
+
+			.fresh__controls {
+				display: block;
+				@include reset-list;
+				width: 1224px;
+				height: 44px;
+				position: absolute;
+				bottom: 160px;
+			}
+
+			.fresh__control {
+				position: absolute;
+		
+				&:first-child {
+					top: 0;
+					left: -22px;
+				}
+
+				&:last-child {
+					top: 0;
+					right: -22px;
+				}
+			}
+
+			.fresh__control-button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				border: 1px solid $grey100;
+				background-color: $white;
+			}
+		}
+	}
+
+	.fresh__wrapper {
+		padding-top: 80px;
+		padding-bottom: 56px;
+	}
+
+	.fresh__title {
+		@include titleMediumSemibold;
+		margin-bottom: 32px;
+	}
+
+	.fresh__navigation-list {
+		display: none;
+	}
+
+	.fresh__card-list {
+		flex-wrap: wrap;
+		// gap: 24px;
+	}
+
+	.fresh__card-item {
+		margin: 0;
+		margin-right: 24px;
+		margin-bottom: 24px;
+		width: calc(100% / 3 - 16px);
+		padding: 24px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+			margin-bottom: 24px;
+		}
+	}
+
+	.fresh__expand {
+		top: 88px;
+		right: 108px;
+	}
+}

@@ -1,0 +1,151 @@
+.authentication__wrapper {
+	padding: 24px 16px 16px;
+
+	position: relative;
+}
+
+.authentication__title {
+	@include titleExtraSmallBold;
+	margin: 0 0 24px 0;
+}
+
+.authentication__close {
+	@include smallButtonClose;
+	top: 30px;
+}
+
+.authentication__links-list {
+	@include reset-list;
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+	border-bottom: 1px solid $grey200;
+}
+
+.authentication__links-item {
+	margin-bottom: 8px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.authentication__links-link {
+	@include longButton;
+
+	&:hover {
+		background-color: $grey50;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+		outline: none;
+	}
+
+	svg {
+		margin-right: 8px;
+	}
+}
+
+.authentication__variants-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 24px;
+}
+
+.authentication__variants-item {
+	margin-right: 20px;
+
+	&--current {
+		.authentication__variants-button {
+			color: $grey800;
+		}
+	}
+}
+
+.authentication__variants-button {
+	@include textSmallMedium;
+	padding: 0;
+	color: $grey500;
+	background-color: $transparent;
+	border: 0;
+}
+
+.authentication__set {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.authentication__label {
+	@include textSmallMedium;
+	color: $grey700;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.authentication__input {
+	@include input;
+	@include inputState;
+	margin-bottom: 24px;
+
+	&--password {
+		padding-right: 42px;
+	}
+}
+
+.authentication__container {
+	position: relative;
+}
+
+.authentication__protected-button {
+	@include protectedButton;
+}
+
+.authentication__forgot {
+	@include textSmallMedium;
+	color: $grey800;
+	margin-left: auto;
+}
+
+.authentication__register {
+	@include blueButton;
+	border: none;
+}
+
+.authentication__agree {
+	@include textSmallRegular;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.authentication__agree-label {
+	padding-left: 24px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		@include checkboxBlue;
+	}
+}
+
+.authentication__agree-checkbox {
+	&:checked {
+		~ .authentication__agree-label {
+			&::after {
+				@include tickBlue;
+			}
+		}
+	}
+}
+
+.authentication__agree-policy {
+	color: #3A70F7;
+}
+
+@media (min-width: 480px) {
+	.authentication__agree {
+		padding-right: 90px;
+	}
+}

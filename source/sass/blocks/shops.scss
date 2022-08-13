@@ -1,0 +1,245 @@
+.shops__wrapper {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.shops__title {
+	@include titleExtraSmallSemibold;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.shops__navigation-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+	
+	position: relative;
+	width: 100vw;
+	left: 16px;
+	transform: translateX(-16px);
+}
+
+.shops__navigation-item {
+	@include textExtraSmallMedium;
+	color: $grey500;
+	flex-shrink: 0;
+	padding: 8px 12px;
+	border-radius: 100px;
+	cursor: pointer;
+
+	&--current {
+		background-color: $grey700;
+		color: $white;
+		box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+		cursor: auto;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $grey700;
+		color: $white;
+		cursor: auto;
+	}
+}
+
+.shops__card-list {
+	@include reset-list;
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.shops__card-item {
+	width: 160px;
+	min-height: 220px;
+	flex-shrink: 0;
+	border: 1px solid $grey200;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 12px;
+	padding: 12px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.shops__card-picture {
+	margin-bottom: 16px;
+}
+
+.shops__card-title {
+	@include textSmallSemibold;
+	color: $grey800;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+.shops__card-deleted {
+	@include textExtraSmallRegular;
+	color: $grey600;
+	margin-bottom: 16px;
+}
+
+.shops__card-inserted {
+	@include textSmallSemibold;
+	text-decoration: none;
+	padding-left: 28px;
+	margin-bottom: 16px;
+	position: relative;
+
+	&::before {
+		@include mobileDiamond;
+	}
+}
+
+.shops__card-activate {
+	@include smallButtonBlueWithoutIcon;
+	border-radius: 100px;
+}
+
+.shops__expand {
+	@include expandButton;
+
+	&:hover {
+		background-color: $grey50;
+		border: 1px solid $grey300;
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: 0px 0px 0px 2px #F2F4F7;
+	}
+}
+
+@media (min-width: 1024px) {
+	.shops__wrapper {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		position: relative;
+	}
+
+	.shops__title {
+		@include titleSmallSemibold;
+		margin-bottom: 32px;
+	}
+
+	.shops__navigation-list {
+		left: auto;
+		transform: translateX(0);
+		position: static;
+		width: max-content;
+	}
+
+	.shops__card-list {
+		margin-bottom: 0;
+	}
+
+	.shops__navigation-item {
+		@include textMediumMedium;
+		margin-right: 8px;
+	}
+
+	.shops__card-item {
+		width: 184px;
+		margin-right: 16px;
+		padding: 16px;
+	}
+
+	.shops__card-image {
+		width: 152px;
+		height: 60px;
+	}
+
+	.shops__card-inserted {
+		@include textExtraSmallSemibold;
+		padding-left: 32px;
+		margin-bottom: 19px;
+
+		&::before {
+			@include bigMobileDiamond;
+		}
+	}
+
+	.shops__card-activate {
+		padding: 5px 12px;
+	}
+
+	.shops__expand {
+		@include textLargeMedium;
+		color: $primary500;
+		padding: 0;
+		width: max-content;
+		border: none;
+		position: absolute;
+		top: 69px;
+		right: 40px;
+
+		&:hover {
+			background-color: $transparent;
+			border: none;
+		}
+
+		&:focus,
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.shops__wrapper {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.shops__title {
+		@include titleMediumSemibold;
+	}
+
+	.shops__navigation-list {
+		margin-bottom: 32px;
+	}
+
+	.shops__card-list {
+		// gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.shops__card-item {
+		width: calc(100% / 4 - 18px);
+		margin-right: 24px;
+		margin-bottom: 24px;
+		padding: 24px;
+
+		&:last-child {
+			margin: 0;
+			display: none;
+		}
+
+		&:nth-child(4n) {
+			margin: 0;
+			margin-bottom: 24px;
+		}
+	}
+
+	.shops__card-picture {
+		margin-bottom: 24px;
+	}
+
+	.shops__card-image {
+		width: 168px;
+		height: 66px;
+	}
+
+	.shops__card-activate {
+		align-self: flex-start;
+	}
+
+	.shops__expand {
+		top: 88px;
+		right: 108px;
+	}
+}
